@@ -1,0 +1,11 @@
+<section class="section projects">
+    <div class="wrapper">
+        <ul>
+            {{- range where .Site.RegularPages "Type" "list-of-projects" -}}
+            <li>
+                <a href="{{ .Params.affiliatelink }}" class="link" target="_blank">{{.Title}}</a>
+            </li>
+            {{- end -}}
+        </ul>
+    </div>
+</section>
