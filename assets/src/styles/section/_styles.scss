@@ -1,0 +1,8 @@
+@use '../susanoo-functions' as susanoo;
+
+.section {
+    background: {
+        color: #0c0c0c;
+    }
+    padding: susanoo.rem-calc(50);
+}

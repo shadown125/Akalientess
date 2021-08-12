@@ -1,0 +1,31 @@
+@use "../color-tokens" as *;
+
+$color-links: "var(--color-primary)" !default;
+$color-grey-hue: $color-primary !default;
+$color-background-body: scale-color($color-grey-hue, $lightness: 98%) !default;
+$color-grey-hue: hue($color-grey-hue);
+
+$font-family: "Noto Sans JP", sans-serif !default;
+$font-weight-normal: normal !default;
+$font-weight-bold: 700 !default;
+
+:root {
+    @include color-tokens();
+
+    --color-links: #{$color-links};
+    --grey-medium: hsl(#{$color-grey-hue}, 15%, 50%);
+    --grey-light: hsl(#{$color-grey-hue}, 20%, 85%);
+    --background-body: #{$color-background-body};
+    --font-weight-bold: #{$font-weight-bold};
+    --font-weight-normal: #{$font-weight-normal};
+}
+
+body {
+    background: {
+        color: var(--background-body);
+    }
+    color: var(--color-text);
+    font: {
+        family: $font-family;
+    }
+}

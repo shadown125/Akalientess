@@ -1,0 +1,11 @@
+{{ define "content" }}
+
+<ul>
+    {{- range where .Site.RegularPages "Type" "pattern-library" -}}
+    <li>
+        <a href="{{ .Permalink }}"s>{{.Title}}</a>
+    </li>
+    {{- end -}}
+</ul>
+
+{{ end }}

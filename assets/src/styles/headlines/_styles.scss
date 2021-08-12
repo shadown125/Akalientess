@@ -1,0 +1,13 @@
+@use '../susanoo-functions' as susanoo;
+@use '../reset-list' as list;
+@use 'variables';
+
+.headlines {
+    ul {
+        @include list.reset-list();
+    }
+}
+
+.headline {
+    color: variables.$color;
+}

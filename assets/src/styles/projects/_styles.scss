@@ -1,0 +1,9 @@
+@use '../susanoo-functions' as susanoo;
+@use 'variables' as variables;
+@use '../reset-list' as list;
+
+.projects {
+    ul {
+        @include list.reset-list();
+    }
+}
