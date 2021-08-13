@@ -5,6 +5,7 @@
 
 $color-primary: hsl(258, 75%, 50%) !default;
 $color-on-primary: hsl(0, 0%, 100%) !default;
+$color-black-primary: #1c1d25 !default;
 $color-error: hsl(350, 75%, 50%) !default;
 $color-on-error: hsl(352.5, 100%, 98.4%) !default;
 $color-text: hsl(258, 20%, 30%) !default;
@@ -15,6 +16,7 @@ $base-color-tokens: ("primary", "error", "text");
 $color-tokens: (
         "color-primary": $color-primary,
         "color-on-primary": $color-on-primary,
+        "color-black-primary": $color-black-primary,
         "color-error": $color-error,
         "color-on-error": $color-on-error,
         "color-text": $color-text,
@@ -24,6 +26,7 @@ $color-tokens: (
 @mixin color-tokens() {
     --color-primary: #{$color-primary};
     --color-on-primary: #{$color-on-primary};
+    --color-black-primary: #{$color-black-primary};
     --color-error: #{$color-error};
     --color-on-error: #{$color-on-error};
     --color-text: #{$color-text};

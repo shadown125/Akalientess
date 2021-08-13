@@ -1,0 +1,38 @@
+@keyframes button-close-background-color {
+    0% {
+        background: {
+            color: #dbdce4;
+        }
+    }
+    50% {
+        background: {
+            color: #ff6767;
+        }
+    }
+    100% {
+        background: {
+            color: #dbdce4;
+        }
+    }
+}
+
+@keyframes button-menu-hover-background-color {
+    0% {
+        background: #FFF200;
+    }
+    20% {
+        background: #FF0000;
+    }
+    40% {
+        background: #1565C0;
+    }
+    60% {
+        background: #1E9600;
+    }
+    80% {
+        background: #b92b27;
+    }
+    100% {
+        background: #FFF200;
+    }
+}

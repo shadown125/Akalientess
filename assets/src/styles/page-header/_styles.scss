@@ -1,10 +1,8 @@
 @use '../susanoo-functions' as susanoo;
 @use 'variables' as variables;
-@use '../reset-list' as list;
-@use '../icons/variables' as icon;
 
 .page-header {
-    .headline {
-        color: black;
+    background: {
+        color: var(--color-black-primary);
     }
 }

@@ -1,181 +1,141 @@
 @use '../susanoo-functions' as susanoo;
 @use '../reset-list' as list;
 @use 'variables' as variables;
-@use '../icons/variables' as icon;
-
-.main-navigation-container {
-    background: {
-        color: variables.$navigation-background-color;
-    }
-    visibility: hidden;
-    position: absolute;
-    top: 0;
-    left: 0;
-    min-height: calc(100vh - #{susanoo.rem-calc(83)});
-    z-index: 2;
-    &.is-active {
-        visibility: visible;
-        .navigation {
-            .headline {
-                display: block;
-            }
-            a {
-                padding: {
-                    top: susanoo.rem-calc(10);
-                    right: susanoo.rem-calc(10);
-                    bottom: susanoo.rem-calc(10);
-                    left: susanoo.rem-calc(46);
-                }
-                &::before {
-                    top: susanoo.rem-calc(12);
-                    left: susanoo.rem-calc(12);
-                    transform: unset;
-                }
-                &.disabled {
-                    display: block;
-                }
-            }
-            span {
-                display: block;
-            }
-        }
-    }
-    @include susanoo.breakpoint(medium) {
-        visibility: visible;
-        position: unset;
-        min: {
-            height: unset;
-        }
-    }
-    @include susanoo.breakpoint(large) {
-        min-height: calc(100vh - #{susanoo.rem-calc(83)});
-    }
-}
+@use '../icons' as icon;
 
 .main-navigation {
-    .navigation {
-        padding: {
-            top: susanoo.rem-calc(16);
-            right: susanoo.rem-calc(16);
-            bottom: susanoo.rem-calc(16);
-            left: susanoo.rem-calc(16);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min: {
+        height: 10vh;
+    }
+    .container {
+        display: none;
+        @include susanoo.breakpoint(medium) {
+            display: block;
         }
-        @include susanoo.breakpoint(large) {
-            padding: {
-                right: susanoo.rem-calc(32);
-            }
-        }
-        .container {
-            position: relative;
-            padding: {
-                top: susanoo.rem-calc(10);
-            }
-            &::before {
-                content: "";
-                position: absolute;
+        @media (max-width: 40em) {
+            &.is-active {
+                display: grid;
+                align-content: space-between;
+                position: fixed;
                 top: 0;
                 left: 0;
                 width: 100%;
-                border: {
-                    width: 1px;
-                    style: solid;
-                    color: grey;
+                height: 100vh;
+                background: {
+                    image: linear-gradient(270deg,#235aa6,#101b3b);
                 }
-            }
-            @include susanoo.breakpoint(large) {
-                padding: {
-                    top: 0;
+                z-index: 2;
+                .button-close {
+                    justify-self: end;
+                    margin: {
+                        top: susanoo.rem-calc(10);
+                        right: susanoo.rem-calc(16);
+                    }
                 }
-                &::before {
-                    content: none;
-                }
-            }
-        }
-        .headline {
-            display: none;
-            color: variables.$headline-color;
-            margin: {
-                bottom: susanoo.rem-calc(10);
-            }
-            @include susanoo.breakpoint(large) {
-                display: block;
-            }
-        }
-        div {
-            > ul {
-                @include list.reset-list();
-                margin: {
-                    bottom: susanoo.rem-calc(10);
-                }
-            }
-        }
-        a {
-            position: relative;
-            padding: susanoo.rem-calc(24);
-            margin: {
-                bottom: susanoo.rem-calc(6)
-            }
-            border: {
-                radius: susanoo.rem-calc(4);
-            }
-            @include susanoo.breakpoint(large) {
-                padding: {
-                    top: susanoo.rem-calc(10);
-                    right: susanoo.rem-calc(10);
-                    bottom: susanoo.rem-calc(10);
-                    left: susanoo.rem-calc(46);
-                }
-            }
-            &::before {
-                @include susanoo.icon(null, true);
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                font: {
-                    size: susanoo.rem-calc(22);
-                }
-                @include susanoo.breakpoint(large) {
-                    top: susanoo.rem-calc(12);
-                    left: susanoo.rem-calc(12);
-                    transform: unset;
-                }
-            }
-            &.disabled {
-                border: {
-                    radius: unset;
-                }
-                display: none;
-                @include susanoo.breakpoint(large) {
-                    display: block;
-                }
-                &:hover {
-                    background: {
-                        color: variables.$anchor-disabled-background-color;
+                .home-links {
+                    padding: {
+                        left: susanoo.rem-calc(60);
+                    }
+                    margin: {
+                        top: susanoo.rem-calc(-60);
+                    }
+                    a {
+                        color: var(--color-on-primary);
+                        font: {
+                            size: susanoo.rem-calc(30);
+                        }
+                        width: 100%;
                     }
                 }
             }
-            &:hover {
-                background: {
-                    color: variables.$anchor-background-color;
+        }
+    }
+    ul {
+        @include list.reset-list();
+    }
+    .home-links {
+        li {
+            &.icon {
+                display: none;
+            }
+        }
+        @include susanoo.breakpoint(medium) {
+            display: flex;
+            position: unset;
+            height: unset;
+            justify-content: unset;
+            width: unset;
+            background: {
+                image: unset;
+            }
+            flex: {
+                direction: row;
+            }
+            margin: {
+                left: susanoo.rem-calc(24);
+            }
+            li {
+                display: flex;
+                align-items: center;
+                margin: 0 susanoo.rem-calc(16);
+                &:last-child {
+                    display: flex;
+                }
+                &.home {
+                    display: none;
                 }
             }
         }
-        span {
+    }
+    .social-links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: {
+            bottom: susanoo.rem-calc(16);
+        }
+        flex: {
+            wrap: wrap;
+        }
+        @include susanoo.breakpoint(medium) {
             display: none;
-            @include susanoo.breakpoint(large) {
-                display: block;
-            }
         }
-        .dashboard-link {
+        li {
+            margin: 0 susanoo.rem-calc(12);
+        }
+    }
+    button {
+        background: {
+            color: transparent;
+        }
+        border: unset;
+        cursor: pointer;
+        &::before {
+            bottom: susanoo.rem-calc(20);
+        }
+        &::after {
+            bottom: susanoo.rem-calc(20);
+        }
+        .icon {
+            display: block;
+            width: susanoo.rem-calc(20);
             &::before {
-                @include susanoo.icon(icon.$icon-rocket, false);
+                @include susanoo.icon("\e900");
+                font: {
+                    size: susanoo.rem-calc(56);
+                }
+                margin: {
+                    left: susanoo.rem-calc(-18);
+                }
             }
         }
-        .pages-link {
-            &::before {
-                @include susanoo.icon(icon.$icon-open-book, false);
-            }
-        }
+    }
+    img {
+        color: var(--color-on-primary);
+        height: susanoo.rem-calc(60);
+        width: susanoo.rem-calc(60);
     }
 }

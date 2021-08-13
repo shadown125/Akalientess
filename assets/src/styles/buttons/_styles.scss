@@ -1,6 +1,7 @@
 @use '../susanoo-functions' as susanoo;
 @use 'variables' as variables;
 @use '../icons/variables' as icon;
+@use 'animations';
 
 .button {
     display: block;
@@ -86,7 +87,6 @@
     width: susanoo.rem-calc(45);
     height: susanoo.rem-calc(45);
     &::before {
-        @include susanoo.icon(icon.$icon-menu);
         font: {
             size: susanoo.rem-calc(32);
         }
@@ -124,5 +124,124 @@
         font: {
             size: susanoo.rem-calc(20);
         }
+    }
+}
+
+.button-close {
+    display: none;
+    position: relative;
+    @media (max-width: 40em) {
+        &.is-active {
+            display: block;
+            width: susanoo.rem-calc(54);
+            height: susanoo.rem-calc(54);
+        }
+    }
+    &:hover {
+        .first-label {
+            transform: rotate(-45deg);
+            animation: button-close-background-color .4s cubic-bezier(.694,.048,.335,1);
+        }
+        .second-label {
+            transform: rotate(45deg);
+            animation: button-close-background-color .4s cubic-bezier(.694,.048,.335,1);
+        }
+    }
+    :is(span) {
+        display: block;
+        height: 4px;
+        background: {
+            color: #dbdce4;
+        }
+    }
+    .first-label {
+        transform: rotate(45deg);
+        transition: transform .4s cubic-bezier(.694,.048,.335,1);
+    }
+    .second-label {
+        transform: rotate(-45deg);
+        transition: transform .4s cubic-bezier(.694,.048,.335,1);
+        margin: {
+            top: -4px;
+        }
+    }
+}
+
+.button-menu {
+    display: block;
+    width: susanoo.rem-calc(64);
+    height: susanoo.rem-calc(62);
+    margin: {
+        right: susanoo.rem-calc(20);
+        left: susanoo.rem-calc(20);
+    }
+    > div {
+        width: susanoo.rem-calc(44);
+        height: susanoo.rem-calc(22);
+        display: block;
+        position: relative;
+    }
+    @include susanoo.breakpoint(medium) {
+        display: none;
+    }
+    &:hover {
+        :is(span) {
+            border: {
+                radius: susanoo.rem-calc(20);
+            }
+            animation: button-menu-hover-background-color 8s cubic-bezier(.694,.048,.335,1) infinite;
+        }
+        .first-label {
+            top: 20%;
+            left: 60%;
+            right: 0;
+            width: 70%;
+            transform: rotate(90deg);
+        }
+        .second-label {
+            width: 80%;
+            top: -15%;
+            transform: rotate(155deg);
+        }
+        .third-label {
+            width: 80%;
+            top: 50%;
+            right: 0;
+            bottom: 0;
+            transform: rotate(30deg);
+        }
+    }
+    :is(span) {
+        display: block;
+        height: 3px;
+        background: {
+            color: #dbdce4;
+        }
+    }
+    .first-label {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        transition: all .4s cubic-bezier(.694,.048,.335,1);
+    }
+    .second-label {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        width: 80%;
+        margin: {
+            top: -1px;
+        }
+        transition: all .4s cubic-bezier(.694,.048,.335,1);
+    }
+    .third-label {
+        position: absolute;
+        width: 50%;
+        top: 90%;
+        right: 0;
+        bottom: 0;
+        transition: all .4s cubic-bezier(.694,.048,.335,1);
     }
 }
