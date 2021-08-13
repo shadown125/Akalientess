@@ -1,0 +1,26 @@
+<svg width="500" height="500" xmlns="http://www.w3.org/2000/svg">
+ <g>
+  <title>Layer 1</title>
+  <polyline fill="none" stroke="#000" stroke-width="30" opacity="NaN" points="967,759 " id="svg_4" stroke-linecap="round"/>
+  <polyline fill="none" stroke="#000" stroke-width="30" opacity="NaN" points="1026,717 " id="svg_5" stroke-linecap="round"/>
+  <line fill="none" stroke="#000" stroke-width="30" opacity="NaN" x1="972" y1="761" x2="972" y2="761" id="svg_6"/>
+  <line fill="none" stroke="#000" stroke-width="30" opacity="NaN" x1="1054" y1="674" x2="1054" y2="674" id="svg_7"/>
+  <line fill="none" stroke="#000" stroke-width="30" opacity="NaN" x1="1066" y1="683" x2="1066" y2="683" id="svg_8"/>
+  <line fill="none" stroke="#000" stroke-width="30" opacity="NaN" x1="1219" y1="806" x2="1219" y2="806" id="svg_9"/>
+  <line fill="none" stroke="#000" stroke-width="30" opacity="NaN" x1="959" y1="546" x2="959" y2="546" id="svg_10"/>
+  <line fill="none" stroke="#000" stroke-width="30" opacity="NaN" x1="1181" y1="579" x2="1181" y2="579" id="svg_11"/>
+  <line fill="none" stroke="#000" stroke-width="30" opacity="NaN" x1="1214" y1="549" x2="1214" y2="549" id="svg_12"/>
+  <rect fill="none" stroke="#000" stroke-width="30" opacity="NaN" x="1052" y="582" width="0" height="0" id="svg_13"/>
+  <polyline fill="none" stroke="#000" stroke-width="30" opacity="NaN" points="1242,665 " id="svg_14" stroke-linecap="round"/>
+  <polyline fill="none" stroke="#000" stroke-width="30" opacity="NaN" points="854,786 " id="svg_15" stroke-linecap="round"/>
+  <polyline fill="none" stroke="#000" stroke-width="30" opacity="NaN" points="1067,757 " id="svg_16" stroke-linecap="round"/>
+  <polyline fill="none" stroke="#000" stroke-width="30" opacity="NaN" points="969,738 " id="svg_17" stroke-linecap="round"/>
+  <line stroke-width="20" id="svg_3" y2="80.5" x2="290" y1="410.5" x1="72" stroke="#000" fill="none"/>
+  <line stroke="#000" id="svg_18" y2="422.5" x2="412" y1="81.49999" x1="289" stroke-width="30" fill="none"/>
+  <line stroke="#000" id="svg_19" y2="234.5" x2="334" y1="235.5" x1="185" stroke-width="30" fill="none"/>
+  <line stroke="#000" id="svg_20" y2="274.5" x2="360" y1="275.5" x1="163" stroke-width="10" fill="none"/>
+  <line stroke="#000" id="svg_21" y2="407.5" x2="462" y1="63.49999" x1="327" stroke-width="20" fill="none"/>
+  <rect transform="rotate(-21 293.814 78.995)" stroke="#000" id="svg_26" height="2.21571" width="3.54667" y="77.88714" x="292.04087" stroke-width="15" fill="none"/>
+ </g>
+
+</svg>

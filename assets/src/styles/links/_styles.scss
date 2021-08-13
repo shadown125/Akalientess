@@ -29,15 +29,61 @@ textarea {
 }
 
 .link {
-    display: block;
+    display: inline-block;
+    position: relative;
     text: {
         decoration: none;
     }
-    color: var(--color-on-primary);
-    padding: susanoo.rem-calc(6);
+    color: variables.$color-links;
+    font: {
+        weight: var(--font-weight-bold);
+    }
+    padding: susanoo.rem-calc(10);
     transition: color .2s ease-in-out, background-color .2s ease-in-out;
+    &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 6px;
+        width: 0;
+        height: 3px;
+        background: {
+            color: variables.$before-background-color;
+        }
+        transition: all .25s cubic-bezier(.694,.048,.335,1)
+    }
+    @keyframes hoverAnimation {
+        0% {
+            left: 0;
+        }
+        50% {
+            left: 20%;
+        }
+        100% {
+            left: 0;
+        }
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 6px;
+        width: 0;
+        height: 3px;
+        background: {
+            color: variables.$after-background-color;
+        }
+        transition: width .75s cubic-bezier(.694,.048,.335,1) .15s, left .75s ease;
+    }
     &:hover {
-        color: variables.$hover-color;
+        color: var(--color-on-primary);
+        &::before {
+            width: 100%;
+        }
+        &::after {
+            width: 100%;
+            animation: hoverAnimation .65s cubic-bezier(.694,.048,.335,1) .15s;
+        }
     }
     &.disabled {
         pointer-events: none;

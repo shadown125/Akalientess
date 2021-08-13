@@ -1,7 +1,49 @@
 <header class="page-header">
     <div class="wrapper">
-        <div class="container">
-            <h1 class="h1 headline">{{ .Page.Title }}</h1>
-        </div>
+        <nav class="main-navigation">
+            <a href="#">
+<!--                <img src="{{ (resources.Get "build/logo.svg").RelPermalink }}" alt="Logo" class="logo">-->
+            </a>
+            <button class="button-menu" data-button-menu>
+                <div>
+                    <span class="first-label"></span>
+                    <span class="second-label"></span>
+                    <span class="third-label"></span>
+                </div>
+            </button>
+            <div class="container" data-navigation-container>
+                <button class="button-close" data-button-close>
+                    <span class="first-label"></span>
+                    <span class="second-label"></span>
+                </button>
+                <ul class="home-links">
+                    <li class="home">
+                        <a href="#" class="link">Home</a>
+                    </li>
+                    <li>
+                        <a href="#" class="link">Projects</a>
+                    </li>
+                    <li>
+                        <a href="#" class="link">Contact</a>
+                    </li>
+                    <li class="icon">
+                        <button class="link" data-button-mode>
+                            <span class="icon"></span>
+                        </button>
+                    </li>
+                </ul>
+                <ul class="social-links">
+                    <li>
+                        <a href="#" class="link">Github</a>
+                    </li>
+                    <li>
+                        <a href="#" class="link">Twitter</a>
+                    </li>
+                    <li>
+                        <a href="#" class="link">Facebook</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
     </div>
 </header>
