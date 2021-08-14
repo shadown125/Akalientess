@@ -43,6 +43,7 @@
             background: {
                 image: linear-gradient(270deg,#235aa6,#101b3b);
             }
+            z-index: 2;
             .home-links {
                 visibility: hidden;
                 opacity: 0;
@@ -62,7 +63,6 @@
                 visibility: visible;
                 top: 0;
                 left: 0;
-                z-index: 2;
                 .button-close {
                     justify-self: end;
                     margin: {
@@ -169,7 +169,7 @@
             display: block;
             width: susanoo.rem-calc(20);
             &::before {
-                @include susanoo.icon("\e900");
+                @include susanoo.icon(icon.$icon-half-moon);
                 font: {
                     size: susanoo.rem-calc(56);
                 }
@@ -181,7 +181,8 @@
     }
     img {
         color: var(--color-on-primary);
-        height: susanoo.rem-calc(60);
-        width: susanoo.rem-calc(60);
+        padding: susanoo.rem-calc(6) 0;
+        height: susanoo.rem-calc(74);
+        width: susanoo.rem-calc(74);
     }
 }
