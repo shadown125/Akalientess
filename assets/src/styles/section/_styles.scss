@@ -1,8 +1,50 @@
 @use '../susanoo-functions' as susanoo;
 
 .section {
-    background: {
-        color: #0c0c0c;
+    padding: susanoo.rem-calc(50) susanoo.rem-calc(20);
+    @include susanoo.breakpoint(large-m) {
+        padding: susanoo.rem-calc(50);
     }
-    padding: susanoo.rem-calc(50);
+    .mask {
+        &:not(&.long-text) {
+            @include susanoo.breakpoint(medium) {
+                width: max-content;
+            }
+        }
+        position: relative;
+        overflow: hidden;
+        padding: {
+            right: susanoo.rem-calc(16);
+        }
+        .author {
+            font: {
+                style: italic;
+            }
+            margin: {
+                bottom: susanoo.rem-calc(32)
+            }
+        }
+    }
+    .overlay {
+        display: block;
+        position: absolute;
+        background-color: #fff;
+        top: susanoo.rem-calc(-10);
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+        animation: overlayText .75s ease-in-out;
+        &.is-revealed {
+            opacity: 0;
+        }
+    }
+}
+
+@keyframes overlayText {
+    0% {
+        left: 0
+    }
+    100% {
+        left: 100%;
+    }
 }

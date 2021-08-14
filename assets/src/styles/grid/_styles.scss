@@ -6,3 +6,9 @@
     }
     margin: 0 auto;
 }
+
+.inner-wrapper {
+    @include susanoo.breakpoint(large-m) {
+        padding: 0 susanoo.rem-calc(160);
+    }
+}

@@ -1,7 +1,7 @@
 baseURL = 'http://akalientess.com/'
 relativeurls = true
 languageCode = 'en-us'
-title = 'Akalientess'
+title = 'AkaLientesS'
 disableKinds = ["section"]
 [permalinks]
     list-of-projects = "/:filename"
