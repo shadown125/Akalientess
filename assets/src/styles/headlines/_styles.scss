@@ -3,6 +3,9 @@
 @use 'variables';
 
 .headlines {
+    background: {
+        color: var(--color-black-primary);
+    }
     ul {
         @include list.reset-list();
     }

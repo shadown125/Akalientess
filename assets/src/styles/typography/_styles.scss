@@ -26,7 +26,7 @@ $type-scale: "perfectFourth" !default;
 
 $type-scale-ratio: type-ratio($type-scale);
 
-$type-levels: 4, 3, 2, 1;
+$type-levels: 5, 4, 3, 2, 1;
 
 $level-size: $type-base-size;
 
@@ -58,7 +58,7 @@ $level-size: $type-base-size;
         }
     }
 }
-:is(h1, h2, h3, h4, .h1, .h2, .h3, .h4) {
+:is(h1, h2, h3, h4, .h1, .h2, .h3, .h4, h5) {
     margin: {
         bottom: 0.65em;
     }
