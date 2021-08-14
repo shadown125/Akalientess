@@ -1,0 +1,15 @@
+backend:
+  name: github
+  repo: shadown125/Akalientess
+
+media_folder: "static/images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "pattern-library"
+    label: "Pattern Library"
+    folder: "content/pattern-library"
+    create: true
+    slug: "{{ slug }}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
