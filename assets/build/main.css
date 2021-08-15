@@ -826,103 +826,6 @@ textarea:focus-visible {
   background-repeat: no-repeat;
   background-position: 5% 30%;
 }
-.staging .social-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: grid;
-  align-content: center;
-  position: sticky;
-  top: 1rem;
-  height: 100%;
-  margin-left: auto;
-}
-.staging .social-list li {
-  margin: 0;
-}
-.staging .social-list li::before {
-  content: none;
-}
-.staging .social-list span {
-  display: none;
-}
-.staging .social-list li {
-  margin-bottom: 1.5rem;
-}
-.staging .social-list a {
-  text-decoration: none;
-}
-.staging .social-list a::before {
-  font-family: "icomoon";
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  speak: never;
-  text-transform: none;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: #b0b2c3;
-  padding: 1rem;
-  font-size: 1.5rem;
-  transition: color 0.2s ease;
-}
-@media only screen and (min-width: 64em) {
-  .staging .social-list a::before {
-    font-size: 2.875rem;
-  }
-}
-.staging .social-list a:hover::before {
-  color: var(--color-on-primary);
-}
-.staging .social-list .github::before {
-  content: "";
-  font-family: "icomoon";
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  speak: never;
-  text-transform: none;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-.staging .social-list .twitter::before {
-  content: "";
-  font-family: "icomoon";
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  speak: never;
-  text-transform: none;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-.staging .social-list .linkedin::before {
-  content: "";
-  font-family: "icomoon";
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  speak: never;
-  text-transform: none;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-.staging .social-list .codepen::before {
-  content: "";
-  font-family: "icomoon";
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  speak: never;
-  text-transform: none;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
 
 .projects .description {
   display: none;
@@ -1192,6 +1095,150 @@ textarea:focus-visible {
 }
 .projects-external .link-project .headline {
   color: var(--color-black-primary);
+}
+
+.social-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  align-content: center;
+  position: sticky;
+  top: 1rem;
+  height: 100%;
+  margin-left: auto;
+}
+.social-list li {
+  margin: 0;
+}
+.social-list li::before {
+  content: none;
+}
+.social-list span {
+  display: none;
+}
+.social-list li {
+  margin-bottom: 1.5rem;
+}
+.social-list a {
+  text-decoration: none;
+}
+.social-list a::before {
+  font-family: "icomoon";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  speak: never;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #b0b2c3;
+  padding: 1rem;
+  font-size: 1.5rem;
+  transition: color 0.2s ease;
+}
+@media only screen and (min-width: 64em) {
+  .social-list a::before {
+    font-size: 2.875rem;
+  }
+}
+.social-list a:hover::before {
+  color: var(--color-on-primary);
+}
+.social-list .github::before {
+  content: "";
+  font-family: "icomoon";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  speak: never;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.social-list .twitter::before {
+  content: "";
+  font-family: "icomoon";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  speak: never;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.social-list .linkedin::before {
+  content: "";
+  font-family: "icomoon";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  speak: never;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.social-list .codepen::before {
+  content: "";
+  font-family: "icomoon";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  speak: never;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.footer {
+  background-color: var(--color-black-primary);
+}
+@media only screen and (min-width: 40em) {
+  .footer .inner-wrapper {
+    padding: 0 3.75rem;
+  }
+}
+.footer .container {
+  display: flex;
+  align-items: center;
+  min-height: 10vh;
+}
+@media (max-width: 40em) {
+  .footer .container {
+    flex-direction: column;
+    padding: 0 2rem;
+  }
+}
+@media (max-width: 40em) {
+  .footer .copyright {
+    margin-top: 2rem;
+  }
+}
+.footer .social-list {
+  display: flex;
+}
+@media (max-width: 40em) {
+  .footer .social-list {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    margin-left: 0;
+  }
+}
+.footer .social-list li {
+  margin-bottom: 0;
+}
+@media (max-width: 40em) {
+  .footer .social-list li:first-child a::before {
+    padding-left: 0;
+  }
+}
+.footer .social-list a::before {
+  font-size: 1.875rem;
 }
 
 .section {

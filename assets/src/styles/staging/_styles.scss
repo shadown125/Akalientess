@@ -1,7 +1,6 @@
 @use '../susanoo-functions' as susanoo;
 @use '../reset-list' as list;
 @use '../icons' as icon;
-@use 'variables';
 
 .staging {
     height: 90vh;
@@ -33,67 +32,6 @@
             size: susanoo.rem-calc(300);
             repeat: no-repeat;
             position: 5% 30%;
-        }
-    }
-    .social-list {
-        @include list.reset-list();
-        display: grid;
-        align-content: center;
-        position: sticky;
-        top: 1rem;
-        height: 100%;
-        margin: {
-            left: auto;
-        }
-        span {
-            display: none;
-        }
-        li {
-            margin: {
-                bottom: susanoo.rem-calc(24);
-            }
-        }
-        a {
-            text-decoration: none;
-            &::before {
-                @include susanoo.icon(null, true);
-                color: variables.$icon-color;
-                padding: susanoo.rem-calc(16);
-                font: {
-                    size: susanoo.rem-calc(24);
-                }
-                transition: color .2s ease;
-                @include susanoo.breakpoint(large-m) {
-                    font: {
-                        size: susanoo.rem-calc(46);
-                    }
-                }
-            }
-            &:hover {
-                &::before {
-                    color: var(--color-on-primary);
-                }
-            }
-        }
-        .github {
-            &::before {
-                @include susanoo.icon(icon.$icon-github);
-            }
-        }
-        .twitter {
-            &::before {
-                @include susanoo.icon(icon.$icon-twitter);
-            }
-        }
-        .linkedin {
-            &::before {
-                @include susanoo.icon(icon.$icon-linkedin);
-            }
-        }
-        .codepen {
-            &::before {
-                @include susanoo.icon(icon.$icon-codepen);
-            }
         }
     }
 }
