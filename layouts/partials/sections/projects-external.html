@@ -5,7 +5,7 @@
         {{- range (where .Site.RegularPages "Type" "list-of-projects-external").Reverse -}}
             <li>
                 <a href="{{ .Params.affiliatelink }}"
-                   class="link-project" target="_blank" data-overlay>
+                   class="link-project" target="_blank" rel="external noopener" data-overlay>
                     <div data-overlay></div>
                     <h3 class="h3 headline">{{ .Title }}</h3>
                     <div class="h5 credits">{{ .Content }}</div>
