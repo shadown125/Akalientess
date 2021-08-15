@@ -1051,6 +1051,7 @@ textarea:focus-visible {
 }
 @media (max-width: 40em) {
   .projects .link-project {
+    width: 95%;
     padding: 0 1.875rem;
   }
 }
@@ -1096,6 +1097,11 @@ textarea:focus-visible {
   color: var(--grey-light);
   opacity: 1;
 }
+@media (max-width: 40em) {
+  .projects .link-project.is-revealed .numbers-mask {
+    top: -3.75rem;
+  }
+}
 .projects .link-project .project-mask {
   position: absolute;
   top: 0;
@@ -1125,6 +1131,12 @@ textarea:focus-visible {
   opacity: 0;
   font-size: 10rem;
   transition: all 0.5s ease-in-out 1.5s;
+}
+@media (max-width: 40em) {
+  .projects .link-project .numbers-mask {
+    right: 1.25rem;
+    font-size: 5rem;
+  }
 }
 
 .section {

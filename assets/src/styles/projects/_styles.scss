@@ -140,6 +140,7 @@
         }
         transition: all .5s ease-in-out 1s;
         @media (max-width: 40em) {
+            width: 95%;
             padding: 0 susanoo.rem-calc(30);
         }
         &::before {
@@ -185,6 +186,9 @@
                 top: susanoo.rem-calc(-130);
                 color: var(--grey-light);
                 opacity: 1;
+                @media (max-width: 40em) {
+                    top: susanoo.rem-calc(-60);
+                }
             }
         }
         .project-mask {
@@ -222,6 +226,12 @@
                 size: susanoo.rem-calc(160)
             }
             transition: all .5s ease-in-out 1.5s;
+            @media (max-width: 40em) {
+                right: susanoo.rem-calc(20);
+                font: {
+                    size: susanoo.rem-calc(80)
+                }
+            }
         }
     }
 }
