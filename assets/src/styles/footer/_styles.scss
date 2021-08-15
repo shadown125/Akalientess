@@ -1,0 +1,63 @@
+@use '../susanoo-functions' as susanoo;
+
+.footer {
+    background: {
+        color: var(--color-black-primary);
+    }
+    .inner-wrapper {
+        @include susanoo.breakpoint(medium) {
+            padding: 0 susanoo.rem-calc(60);
+        }
+    }
+    .container {
+        display: flex;
+        align-items: center;
+        min: {
+            height: 10vh;
+        }
+        @media (max-width: 40em) {
+            flex-direction: column;
+            padding: 0 susanoo.rem-calc(32);
+        }
+    }
+    .copyright {
+        @media (max-width: 40em) {
+            margin: {
+                top: susanoo.rem-calc(32);
+            }
+        }
+    }
+    .social-list {
+        display: flex;
+        @media (max-width: 40em) {
+            margin: {
+                top: susanoo.rem-calc(24);
+                bottom: susanoo.rem-calc(24);
+                left: 0;
+            }
+        }
+        li {
+            margin: {
+                bottom: 0;
+            }
+            @media (max-width: 40em) {
+                &:first-child {
+                    a {
+                        &::before {
+                            padding: {
+                                left: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        a {
+            &::before {
+                font: {
+                    size: susanoo.rem-calc(30);
+                }
+            }
+        }
+    }
+}
