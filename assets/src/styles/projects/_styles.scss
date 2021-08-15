@@ -3,6 +3,13 @@
 @use '../reset-list' as list;
 
 .projects {
+    .headline {
+        text-align: center;
+        color: #4a4a4b;
+        font: {
+            weight: var(--font-weight-bold);
+        }
+    }
     ul {
         @include list.reset-list();
     }
