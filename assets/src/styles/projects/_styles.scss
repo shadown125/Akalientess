@@ -3,8 +3,32 @@
 @use '../reset-list' as list;
 
 .projects {
+    .description {
+        display: none;
+        @include susanoo.breakpoint(large-m) {
+            display: block;
+            color: white;
+            position: absolute;
+            bottom: susanoo.rem-calc(60);
+            left: susanoo.rem-calc(220);
+            max-width: susanoo.rem-calc(400);
+            transition: all .5s ease-in-out 1s;
+            z-index: 3;
+        }
+    }
+    .mask {
+        width: max-content;
+        margin: {
+            left: auto;
+            right: auto;
+        }
+        .overlay {
+            background: {
+                color: #4a4a4b;
+            }
+        }
+    }
     .headline {
-        text-align: center;
         color: #4a4a4b;
         font: {
             weight: var(--font-weight-bold);
@@ -12,5 +36,189 @@
     }
     ul {
         @include list.reset-list();
+        li {
+            display: grid;
+            justify-content: stretch;
+            margin: {
+                bottom: susanoo.rem-calc(100);
+            }
+        }
+    }
+    li {
+        position: relative;
+        @include susanoo.breakpoint(medium) {
+            padding: 0 susanoo.rem-calc(20);
+        }
+        @include susanoo.breakpoint(large-m) {
+            padding: 0 susanoo.rem-calc(100);
+        }
+        &:last-child {
+            margin: {
+                bottom: 0;
+            }
+        }
+        &:first-child {
+            margin: {
+                top: susanoo.rem-calc(50);
+            }
+        }
+        &:nth-child(odd) {
+            a {
+                @include susanoo.breakpoint(medium) {
+                    left: susanoo.rem-calc(-40);
+                }
+                &.is-revealed {
+                    @include susanoo.breakpoint(large-m) {
+                        + .description {
+                            bottom: 74%;
+                            left: 60%;
+                            color: var(--color-black-primary);
+                        }
+                    }
+                    .project-mask {
+                        width: 0;
+                        left: 100%;
+                    }
+                }
+            }
+            @include susanoo.breakpoint(large-m) {
+                .overlay-project {
+                    left: -30%;
+                }
+            }
+        }
+        &:nth-child(even) {
+            a {
+                @include susanoo.breakpoint(medium) {
+                    left: susanoo.rem-calc(40);
+                }
+                &.is-revealed {
+                    @include susanoo.breakpoint(large-m) {
+                        + .description {
+                            bottom: 74%;
+                            left: 0;
+                            color: var(--color-black-primary);
+                        }
+                    }
+                    .project-mask {
+                        width: 0;
+                        left: 100%;
+                    }
+                }
+            }
+            @include susanoo.breakpoint(large-m) {
+                .overlay-project {
+                    left: 30%;
+                }
+            }
+        }
+    }
+    .link-project {
+        display: grid;
+        justify-content: start;
+        align-content: center;
+        position: relative;
+        left: 0;
+        margin: 0 auto;
+        padding: 0 susanoo.rem-calc(100);
+        height: susanoo.rem-calc(500);
+        width: 90%;
+        border: {
+            radius: susanoo.rem-calc(6);
+        }
+        box: {
+            shadow: 0 susanoo.rem-calc(25) susanoo.rem-calc(70) 0 rgb(0 0 0 / 50%);
+        }
+        background: {
+            color: var(--color-black-primary);
+            size: cover;
+            position: center;
+            repeat: no-repeat;
+        }
+        transition: all .5s ease-in-out 1s;
+        @media (max-width: 40em) {
+            padding: 0 susanoo.rem-calc(30);
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background: {
+                color: var(--color-black-primary);
+            }
+            opacity: 0.5;
+            z-index: 3;
+        }
+        .headline,
+        .credits {
+            transition: transform .2s ease .5s;
+        }
+        &:hover {
+            .headline,
+            .credits {
+                transform: scale(1.1);
+                @include susanoo.breakpoint(medium) {
+                    transform: scale(1.2);
+                }
+            }
+            .project-mask--hover {
+                width: 100%;
+            }
+        }
+        &.overlay-project {
+            @include susanoo.breakpoint(large-m) {
+                width: 62%;
+            }
+        }
+        > * {
+            color: var(--color-text);
+            z-index: 3;
+        }
+        &.is-revealed {
+            .numbers-mask {
+                top: susanoo.rem-calc(-130);
+                color: var(--grey-light);
+                opacity: 1;
+            }
+        }
+        .project-mask {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: {
+                image: linear-gradient(270deg, #f06449, #ef3636);
+            }
+            transition: all .75s ease-in-out;
+            z-index: 2;
+            &--hover {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 0;
+                height: 100%;
+                background: {
+                    image: linear-gradient(270deg, #235aa6, #101b3b);
+                }
+                transition: width .6s ease;
+                z-index: 1;
+            }
+        }
+        .numbers-mask {
+            display: block;
+            position: absolute;
+            color: var(--grey-medium);
+            top: 0;
+            right: susanoo.rem-calc(40);
+            opacity: 0;
+            font: {
+                size: susanoo.rem-calc(160)
+            }
+            transition: all .5s ease-in-out 1.5s;
+        }
     }
 }

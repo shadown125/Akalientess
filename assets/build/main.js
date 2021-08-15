@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunksusanoo"] = self["webpackChunksusanoo"] || []).push([["main"],{
+(self["webpackChunkBlog"] = self["webpackChunkBlog"] || []).push([["main"],{
 
 /***/ "./src/scripts/Application.js":
 /*!************************************!*\
@@ -266,15 +266,22 @@ function _addOverlayClass2(item) {
   var onIntersection = function onIntersection(entries) {
     if (entries[0]['intersectionRatio'] !== 0) {
       entries.forEach(function (entry) {
-        entry.target.classList.add('overlay');
-        setTimeout(function () {
+        if (entry.target.classList.contains('link-project')) {
+          entry.target.classList.add('overlay-project');
           entry.target.classList.add('is-revealed');
-        }, 700);
+        } else {
+          entry.target.classList.add('overlay');
+          setTimeout(function () {
+            entry.target.classList.add('is-revealed');
+          }, 700);
+        }
       });
     }
   };
 
-  var observer = new IntersectionObserver(onIntersection);
+  var observer = new IntersectionObserver(onIntersection, {
+    threshold: 0.5
+  });
   observer.observe(item);
 }
 
