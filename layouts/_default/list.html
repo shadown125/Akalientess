@@ -1,6 +1,7 @@
 {{ define "content" }}
 
     {{ partial "sections/projects.html" . }}
+    {{ partial "sections/projects-external.html" . }}
 <ul>
     {{- range where .Site.RegularPages "Type" "pattern-library" -}}
     <li>
