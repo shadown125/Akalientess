@@ -1,0 +1,18 @@
+<section class="section projects-external">
+    <div class="wrapper">
+        <h2 class="h2 headline">Projects I work/worked on</h2>
+        <ul>
+        {{- range (where .Site.RegularPages "Type" "list-of-projects-external").Reverse -}}
+            <li>
+                <a href="{{ .Params.affiliatelink }}"
+                   class="link-project" target="_blank" data-overlay>
+                    <div data-overlay></div>
+                    <h3 class="h3 headline">{{ .Title }}</h3>
+                    <div class="h5 credits">{{ .Content }}</div>
+                    <div class="project-mask"></div>
+                </a>
+            </li>
+        {{- end -}}
+        </ul>
+    </div>
+</section>
