@@ -10,8 +10,9 @@
             color: white;
             position: absolute;
             bottom: susanoo.rem-calc(60);
-            left: susanoo.rem-calc(220);
+            left: susanoo.rem-calc(340);
             max-width: susanoo.rem-calc(400);
+            opacity: 0;
             transition: all .5s ease-in-out 1s;
             z-index: 3;
         }
@@ -70,6 +71,7 @@
                 &.is-revealed {
                     @include susanoo.breakpoint(large-m) {
                         + .description {
+                            opacity: 1;
                             bottom: 74%;
                             left: 60%;
                             color: var(--color-black-primary);
@@ -95,6 +97,7 @@
                 &.is-revealed {
                     @include susanoo.breakpoint(large-m) {
                         + .description {
+                            opacity: 1;
                             bottom: 74%;
                             left: 0;
                             color: var(--color-black-primary);
@@ -122,7 +125,7 @@
         margin: 0 auto;
         padding: 0 susanoo.rem-calc(100);
         height: susanoo.rem-calc(500);
-        width: 90%;
+        width: 70%;
         border: {
             radius: susanoo.rem-calc(6);
         }
