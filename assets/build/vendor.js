@@ -1,4 +1,4 @@
-(self["webpackChunksusanoo"] = self["webpackChunksusanoo"] || []).push([["vendor"],{
+(self["webpackChunkBlog"] = self["webpackChunkBlog"] || []).push([["vendor"],{
 
 /***/ "./node_modules/core-js/internals/a-function.js":
 /*!******************************************************!*\

@@ -1,8 +1,15 @@
 @use '../susanoo-functions' as susanoo;
 @use 'variables' as variables;
+@use 'animations';
 
 a:not([class]) {
     color: var(--color-primary);
+}
+
+a {
+    text: {
+        decoration: none;
+    }
 }
 
 a,
@@ -31,9 +38,6 @@ textarea {
 .link {
     display: inline-block;
     position: relative;
-    text: {
-        decoration: none;
-    }
     color: variables.$color-links;
     font: {
         weight: var(--font-weight-bold);
@@ -51,17 +55,6 @@ textarea {
             color: variables.$before-background-color;
         }
         transition: all .25s cubic-bezier(.694,.048,.335,1)
-    }
-    @keyframes hoverAnimation {
-        0% {
-            left: 0;
-        }
-        50% {
-            left: 20%;
-        }
-        100% {
-            left: 0;
-        }
     }
     &::after {
         content: "";

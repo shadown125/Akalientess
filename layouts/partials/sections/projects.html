@@ -1,11 +1,26 @@
 <section class="section projects">
     <div class="wrapper">
-        <ul>
-            {{- range where .Site.RegularPages "Type" "list-of-projects" -}}
-            <li>
-                <a href="{{ .Params.affiliatelink }}" class="link" target="_blank">{{.Title}}</a>
-            </li>
-            {{- end -}}
-        </ul>
+        <div class="mask long-text">
+            <div data-overlay></div>
+            <h2 class="h2 headline">My Projects</h2>
+        </div>
+        <div class="container">
+            <ul>
+                {{- range $index, $value := (where .Site.RegularPages "Type" "list-of-projects-own").Reverse -}}
+                <li>
+                    <a href="{{ .Params.affiliatelink }}"
+                       class="link-project" target="_blank"
+                       style="background-image: url('/{{ .Params.ImageName }}.png')" data-overlay>
+                        <h2 class="h3 headline">{{ .Title }}</h2>
+                        <div class="h5 credits">One of my First projects</div>
+                        <div class="project-mask"></div>
+                        <div class="project-mask--hover"></div>
+                        <div class="numbers-mask">0{{ add $index 1}}</div>
+                    </a>
+                    <div class="description">{{ .Content }}</div>
+                </li>
+                {{- end -}}
+            </ul>
+        </div>
     </div>
 </section>

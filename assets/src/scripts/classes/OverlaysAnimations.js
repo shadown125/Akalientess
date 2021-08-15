@@ -14,15 +14,22 @@ export class OverlaysAnimations {
         const onIntersection = (entries) => {
             if(entries[0]['intersectionRatio'] !== 0) {
                 entries.forEach((entry) => {
-                    entry.target.classList.add('overlay');
-                    setTimeout(() => {
+                    if (entry.target.classList.contains('link-project')) {
+                        entry.target.classList.add('overlay-project');
                         entry.target.classList.add('is-revealed');
-                    }, 700)
+                    } else {
+                        entry.target.classList.add('overlay');
+                        setTimeout(() => {
+                            entry.target.classList.add('is-revealed');
+                        }, 700)
+                    }
                 })
             }
         };
 
-        const observer = new IntersectionObserver(onIntersection);
+        const observer = new IntersectionObserver(onIntersection, {
+            threshold: 0.5
+        });
 
         observer.observe(item);
     }

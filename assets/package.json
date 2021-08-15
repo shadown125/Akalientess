@@ -1,7 +1,7 @@
 {
-  "name": "susanoo",
+  "name": "Blog",
   "version": "1.0.0",
-  "description": "Susanoo CMS",
+  "description": "Akalientess Blog",
   "main": "index.js",
   "scripts": {
     "prebuild": "npm-run-all --parallel",
