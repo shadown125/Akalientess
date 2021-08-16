@@ -58,9 +58,4 @@
             @include susanoo.icon(icon.$icon-linkedin);
         }
     }
-    .codepen {
-        &::before {
-            @include susanoo.icon(icon.$icon-codepen);
-        }
-    }
 }
