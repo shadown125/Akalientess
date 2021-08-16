@@ -900,6 +900,7 @@ textarea:focus-visible {
 .about-me .image-container img {
   -o-object-fit: cover;
      object-fit: cover;
+  width: 100%;
 }
 .about-me .section-text {
   position: absolute;
