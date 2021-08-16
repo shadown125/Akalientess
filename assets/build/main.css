@@ -188,6 +188,17 @@ select {
 
 @keyframes button-close-background-color {
   0% {
+    background-color: var(--color-black-primary);
+  }
+  50% {
+    background-color: #ff6767;
+  }
+  100% {
+    background-color: var(--color-black-primary);
+  }
+}
+@keyframes button-close-background-color-grey {
+  0% {
     background-color: #dbdce4;
   }
   50% {
@@ -317,6 +328,14 @@ select {
   font-size: 1.25rem;
 }
 
+.page-header .button-close :is(span) {
+  background-color: #dbdce4;
+}
+.page-header .button-close:hover .first-label,
+.page-header .button-close:hover .second-label {
+  animation: button-close-background-color-grey 0.5s cubic-bezier(0.694, 0.048, 0.335, 1);
+}
+
 .button-close {
   display: none;
   position: relative;
@@ -330,16 +349,16 @@ select {
 }
 .button-close:hover .first-label {
   transform: rotate(-45deg);
-  animation: button-close-background-color 0.4s cubic-bezier(0.694, 0.048, 0.335, 1);
+  animation: button-close-background-color 0.5s cubic-bezier(0.694, 0.048, 0.335, 1);
 }
 .button-close:hover .second-label {
   transform: rotate(45deg);
-  animation: button-close-background-color 0.4s cubic-bezier(0.694, 0.048, 0.335, 1);
+  animation: button-close-background-color 0.5s cubic-bezier(0.694, 0.048, 0.335, 1);
 }
 .button-close :is(span) {
   display: block;
   height: 4px;
-  background-color: #dbdce4;
+  background-color: var(--color-black-primary);
 }
 .button-close .first-label {
   transform: rotate(45deg);
@@ -631,6 +650,136 @@ textarea:focus-visible {
   color: white;
 }
 
+.contact {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  transition: all 0.3s, background-color 0.3s;
+  opacity: 0;
+  visibility: hidden;
+}
+.contact.is-active {
+  opacity: 1;
+  visibility: visible;
+}
+.contact.is-active .contact-footer {
+  opacity: 1;
+}
+@supports ((-webkit-backdrop-filter: blur(0.625rem)) or (backdrop-filter: blur(0.625rem))) {
+  .contact {
+    -webkit-backdrop-filter: blur(0.625rem);
+    backdrop-filter: blur(0.625rem);
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+}
+.contact .contact-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  min-height: 31.25rem;
+  width: 80vw;
+  background-color: #f0f0f0;
+  overflow: hidden;
+}
+@media (max-width: 40em) {
+  .contact .contact-container {
+    width: unset;
+    margin: 0 0.625rem;
+    padding: 0.625rem 1rem;
+  }
+}
+@media only screen and (min-width: 40em) {
+  .contact .contact-container {
+    padding: 2rem 2.625rem;
+  }
+}
+@media only screen and (min-width: 64em) {
+  .contact .contact-container {
+    width: 56.25rem;
+    padding: 2rem 5.75rem;
+  }
+}
+.contact .contact-container > * {
+  color: var(--color-black-primary);
+}
+.contact .contact-container > div {
+  margin-bottom: 1rem;
+}
+.contact .contact-container .headline {
+  margin-top: 3.25rem;
+}
+.contact .contact-container .button-close {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  margin-right: -3.75rem;
+  margin-left: auto;
+  z-index: 4;
+}
+@media (max-width: 40em) {
+  .contact .contact-container .button-close {
+    margin-right: 0;
+  }
+}
+@media only screen and (min-width: 40em) {
+  .contact .contact-container .button-close {
+    margin-right: -1.875rem;
+  }
+}
+.contact .contact-container .button-close.is-active {
+  display: block;
+  width: 3.375rem;
+  height: 3.375rem;
+}
+.contact .contact-container .section-text {
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 31.25rem;
+  font-size: 10rem;
+  color: var(--grey-light);
+  opacity: 0.4;
+}
+.contact .contact-container .mail {
+  margin-top: auto;
+}
+.contact .contact-container .link {
+  color: var(--color-black-primary);
+  transition: color 0.2s linear;
+}
+.contact .contact-container .link:hover {
+  color: #ff6767;
+}
+.contact .contact-footer {
+  padding: 0 2rem;
+  opacity: 0;
+}
+@media (max-width: 40em) {
+  .contact .contact-footer {
+    margin: 0 0.625rem;
+  }
+}
+@media (max-width: 50em) {
+  .contact .contact-footer .container {
+    flex-direction: column;
+    padding: 0 2rem;
+  }
+  .contact .contact-footer .copyright {
+    margin-top: 2rem;
+  }
+  .contact .contact-footer .social-list {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    margin-left: 0;
+  }
+}
+
 .main-navigation {
   display: flex;
   justify-content: space-between;
@@ -701,7 +850,8 @@ textarea:focus-visible {
     margin-top: -7.5rem;
     padding-left: 3.75rem;
   }
-  .main-navigation .container.is-active .home-links a {
+  .main-navigation .container.is-active .home-links a,
+.main-navigation .container.is-active .home-links button {
     color: var(--color-on-primary);
     font-size: 1.875rem;
     width: 100%;
@@ -773,29 +923,10 @@ textarea:focus-visible {
   border: unset;
   cursor: pointer;
 }
-.main-navigation button::before {
-  bottom: 1.25rem;
-}
-.main-navigation button::after {
-  bottom: 1.25rem;
-}
-.main-navigation button .icon {
-  display: block;
-  width: 1.25rem;
-}
-.main-navigation button .icon::before {
-  content: "";
-  font-family: "icomoon";
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  speak: never;
-  text-transform: none;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-size: 3.5rem;
-  margin-left: -1.125rem;
+@media (max-width: 40em) {
+  .main-navigation button {
+    text-align: start;
+  }
 }
 .main-navigation img {
   color: var(--color-on-primary);

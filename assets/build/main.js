@@ -66,7 +66,9 @@ function _initNavigationEvents2() {
   var navigationContainer = document.querySelector('[data-navigation-container]');
   var mobileContainerAnimation = document.querySelector('[data-mobile-container-animation]');
   var navLinks = document.querySelectorAll('[data-nav-link]');
-  new _classes_NavigationEvents__WEBPACK_IMPORTED_MODULE_5__.NavigationEvents(closeButton, menuButton, navigationContainer, mobileContainerAnimation, navLinks);
+  var navContactButton = document.querySelectorAll('[data-nav-contact]');
+  var contactSection = document.querySelector('[data-contact-section]');
+  new _classes_NavigationEvents__WEBPACK_IMPORTED_MODULE_5__.NavigationEvents(closeButton, menuButton, navigationContainer, mobileContainerAnimation, navLinks, navContactButton, contactSection);
 }
 
 function _initOverlaysAnimations2() {
@@ -139,12 +141,20 @@ var _mobileContainerAnimation = /*#__PURE__*/new WeakMap();
 
 var _navLinks = /*#__PURE__*/new WeakMap();
 
+var _contactButton = /*#__PURE__*/new WeakMap();
+
+var _contactSection = /*#__PURE__*/new WeakMap();
+
 var _addRemoveClass = /*#__PURE__*/new WeakSet();
 
-var NavigationEvents = function NavigationEvents(closeButton, menuButton, navigationContainer, mobileContainerAnimation, navLinks) {
+var _contactEvent = /*#__PURE__*/new WeakSet();
+
+var NavigationEvents = function NavigationEvents(closeButton, menuButton, navigationContainer, mobileContainerAnimation, navLinks, contactButton, contactSection) {
   var _this = this;
 
   _classCallCheck(this, NavigationEvents);
+
+  _contactEvent.add(this);
 
   _addRemoveClass.add(this);
 
@@ -173,6 +183,16 @@ var NavigationEvents = function NavigationEvents(closeButton, menuButton, naviga
     value: void 0
   });
 
+  _contactButton.set(this, {
+    writable: true,
+    value: void 0
+  });
+
+  _contactSection.set(this, {
+    writable: true,
+    value: void 0
+  });
+
   _classPrivateFieldSet(this, _closeButton, closeButton);
 
   _classPrivateFieldSet(this, _menuButton, menuButton);
@@ -182,6 +202,14 @@ var NavigationEvents = function NavigationEvents(closeButton, menuButton, naviga
   _classPrivateFieldSet(this, _mobileContainerAnimation, mobileContainerAnimation);
 
   _classPrivateFieldSet(this, _navLinks, navLinks);
+
+  _classPrivateFieldSet(this, _contactButton, contactButton);
+
+  _classPrivateFieldSet(this, _contactSection, contactSection);
+
+  _classPrivateFieldGet(this, _contactButton).forEach(function (item) {
+    item.addEventListener('click', _classPrivateMethodGet(_this, _contactEvent, _contactEvent2).bind(_this));
+  });
 
   _classPrivateFieldGet(this, _navLinks).forEach(function (item) {
     item.addEventListener('click', _classPrivateMethodGet(_this, _addRemoveClass, _addRemoveClass2).bind(_this));
@@ -208,6 +236,24 @@ function _addRemoveClass2() {
   _classPrivateFieldGet(this, _mobileContainerAnimation).classList.add('is-active');
 
   _classPrivateFieldGet(this, _closeButton).classList.add('is-active');
+}
+
+function _contactEvent2() {
+  if (_classPrivateFieldGet(this, _contactSection).classList.contains('is-active')) {
+    _classPrivateFieldGet(this, _contactSection).classList.remove('is-active');
+
+    _classPrivateFieldGet(this, _contactButton).forEach(function (item) {
+      item.classList.remove('is-active');
+    });
+
+    return;
+  }
+
+  _classPrivateFieldGet(this, _contactSection).classList.add('is-active');
+
+  _classPrivateFieldGet(this, _contactButton).forEach(function (item) {
+    item.classList.add('is-active');
+  });
 }
 
 /***/ }),
