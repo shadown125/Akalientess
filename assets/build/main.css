@@ -422,6 +422,14 @@ select {
   transition: all 0.4s cubic-bezier(0.694, 0.048, 0.335, 1);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-y: scroll;
+}
+
 .wrapper {
   max-width: 90rem;
   margin: 0 auto;
