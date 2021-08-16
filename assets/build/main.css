@@ -800,6 +800,128 @@ textarea:focus-visible {
   background-color: var(--color-black-primary);
 }
 
+.about-me {
+  overflow: hidden;
+}
+.about-me ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.about-me ul li {
+  margin: 0;
+}
+.about-me ul li::before {
+  content: none;
+}
+.about-me ul li {
+  margin-bottom: 5rem;
+}
+.about-me ul li:nth-child(odd) .container {
+  left: 0;
+}
+.about-me ul li:nth-child(odd) .image-container {
+  left: 0;
+}
+.about-me ul li:nth-child(even) .mask-about-me--second-head {
+  margin-left: auto;
+}
+.about-me ul li:nth-child(even) .title {
+  margin-left: auto;
+}
+.about-me ul li:nth-child(even) .container {
+  left: 50%;
+}
+@media (max-width: 40em) {
+  .about-me ul li:nth-child(even) .container {
+    left: 0;
+  }
+}
+.about-me ul li:nth-child(even) .image-container {
+  left: -50%;
+}
+.about-me > * {
+  color: var(--color-black-primary);
+}
+.about-me h2 {
+  margin-bottom: 6.25rem;
+}
+.about-me .headline {
+  color: var(--color-black-primary);
+  font-weight: var(--font-weight-bold);
+}
+.about-me .container {
+  position: relative;
+}
+@media only screen and (min-width: 40em) {
+  .about-me .container {
+    min-height: 70vh;
+    max-width: 50%;
+  }
+}
+.about-me .content {
+  font-size: 1.875rem;
+}
+@media (max-width: 40em) {
+  .about-me .content {
+    font-size: 1.25rem;
+  }
+}
+.about-me .mask-about-me {
+  position: relative;
+  overflow: hidden;
+}
+.about-me .mask-about-me .overlay {
+  top: 0;
+}
+.about-me .mask-about-me--head .overlay {
+  top: 0;
+  height: 4ch;
+}
+.about-me .mask-about-me--second-head .overlay {
+  height: 7ch;
+}
+.about-me .mask .overlay,
+.about-me .mask-about-me .overlay {
+  background-color: var(--color-black-primary);
+}
+.about-me .content-wrapper {
+  display: flex;
+}
+.about-me .image-container {
+  position: relative;
+  width: 100%;
+}
+@media (max-width: 40em) {
+  .about-me .image-container {
+    display: none;
+  }
+}
+.about-me .image-container img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.about-me .section-text {
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: -3.75rem;
+  font-size: 10rem;
+  opacity: 0.1;
+}
+@media only screen and (min-width: 40em) {
+  .about-me .section-text {
+    left: -6.25rem;
+    font-size: 16.25rem;
+  }
+}
+@media only screen and (min-width: 64em) {
+  .about-me .section-text {
+    left: -12.5rem;
+    font-size: 22.5rem;
+  }
+}
+
 .staging {
   height: 90vh;
   background-color: var(--color-black-primary);
@@ -829,13 +951,14 @@ textarea:focus-visible {
 
 .projects .description {
   display: none;
+  font-size: 1rem;
 }
 @media only screen and (min-width: 64em) {
   .projects .description {
     display: block;
     color: white;
     position: absolute;
-    bottom: 3.75rem;
+    bottom: 1.25rem;
     left: 21.25rem;
     max-width: 25rem;
     opacity: 0;
@@ -898,9 +1021,10 @@ textarea:focus-visible {
 @media only screen and (min-width: 64em) {
   .projects li:nth-child(odd) a.is-revealed + .description {
     opacity: 1;
-    bottom: 74%;
+    bottom: 14%;
     left: 60%;
     color: var(--color-black-primary);
+    font-size: 1.875rem;
   }
 }
 .projects li:nth-child(odd) a.is-revealed .project-mask {
@@ -920,9 +1044,10 @@ textarea:focus-visible {
 @media only screen and (min-width: 64em) {
   .projects li:nth-child(even) a.is-revealed + .description {
     opacity: 1;
-    bottom: 74%;
+    bottom: 14%;
     left: 0;
     color: var(--color-black-primary);
+    font-size: 1.875rem;
   }
 }
 .projects li:nth-child(even) a.is-revealed .project-mask {

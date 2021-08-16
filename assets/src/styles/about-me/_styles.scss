@@ -1,0 +1,139 @@
+@use '../susanoo-functions' as susanoo;
+@use '../reset-list' as list;
+
+.about-me {
+    overflow: hidden;
+    ul {
+        @include list.reset-list();
+        li {
+            margin: {
+                bottom: susanoo.rem-calc(80);
+            }
+            &:nth-child(odd) {
+                .container {
+                    left: 0;
+                }
+                .image-container {
+                    left: 0;
+                }
+            }
+            &:nth-child(even) {
+                .mask-about-me {
+                    &--second-head {
+                        margin: {
+                            left: auto;
+                        }
+                    }
+                }
+                .title {
+                    margin: {
+                        left: auto;
+                    }
+                }
+                .container {
+                    @media (max-width: 40em) {
+                        left: 0;
+                    }
+                    left: 50%;
+                }
+                .image-container {
+                    left: -50%;
+                }
+            }
+        }
+    }
+    > * {
+        color: var(--color-black-primary);
+    }
+    h2 {
+        margin: {
+            bottom: susanoo.rem-calc(100);
+        }
+    }
+    .headline {
+        color: var(--color-black-primary);
+        font: {
+            weight: var(--font-weight-bold);
+        }
+    }
+    .container {
+        position: relative;
+        @include susanoo.breakpoint(medium) {
+            min-height: 70vh;
+            max: {
+                width: 50%;
+            }
+        }
+    }
+    .content {
+        @media (max-width: 40em) {
+            font: {
+                size: susanoo.rem-calc(20);
+            }
+        }
+        font: {
+            size: susanoo.rem-calc(30);
+        }
+    }
+    .mask-about-me {
+        position: relative;
+        overflow: hidden;
+        .overlay {
+            top: 0;
+        }
+        &--head {
+            .overlay {
+                top: 0;
+                height: 4ch;
+            }
+        }
+        &--second-head {
+            .overlay {
+                height: 7ch;
+            }
+        }
+    }
+    .mask,
+    .mask-about-me {
+        .overlay {
+            background: {
+                color: var(--color-black-primary);
+            }
+        }
+    }
+    .content-wrapper {
+        display: flex;
+    }
+    .image-container {
+        @media (max-width: 40em) {
+            display: none;
+        }
+        position: relative;
+        width: 100%;
+        img {
+            object-fit: cover;
+        }
+    }
+    .section-text {
+        position: absolute;
+        overflow: hidden;
+        top: 0;
+        left: susanoo.rem-calc(-60);
+        font: {
+            size: susanoo.rem-calc(160);
+        }
+        opacity: .1;
+        @include susanoo.breakpoint(medium) {
+            left: susanoo.rem-calc(-100);
+            font: {
+                size: susanoo.rem-calc(260);
+            }
+        }
+        @include susanoo.breakpoint(large-m) {
+            left: susanoo.rem-calc(-200);
+            font: {
+                size: susanoo.rem-calc(360);
+            }
+        }
+    }
+}

@@ -5,11 +5,14 @@
 .projects {
     .description {
         display: none;
+        font: {
+            size: susanoo.rem-calc(16);
+        }
         @include susanoo.breakpoint(large-m) {
             display: block;
             color: white;
             position: absolute;
-            bottom: susanoo.rem-calc(60);
+            bottom: susanoo.rem-calc(20);
             left: susanoo.rem-calc(340);
             max-width: susanoo.rem-calc(400);
             opacity: 0;
@@ -72,9 +75,12 @@
                     @include susanoo.breakpoint(large-m) {
                         + .description {
                             opacity: 1;
-                            bottom: 74%;
+                            bottom: 14%;
                             left: 60%;
                             color: var(--color-black-primary);
+                            font: {
+                                size: susanoo.rem-calc(30);
+                            }
                         }
                     }
                     .project-mask {
@@ -98,9 +104,12 @@
                     @include susanoo.breakpoint(large-m) {
                         + .description {
                             opacity: 1;
-                            bottom: 74%;
+                            bottom: 14%;
                             left: 0;
                             color: var(--color-black-primary);
+                            font: {
+                                size: susanoo.rem-calc(30);
+                            }
                         }
                     }
                     .project-mask {
