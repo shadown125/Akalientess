@@ -1,4 +1,3 @@
-# This is Akalientess Blog Website
-<hr>
-This Blog can be found under:
+# This is Akalientess Portfolio Website
+My Portfolio Website can be found under:
 https://akalientess.netlify.app/
