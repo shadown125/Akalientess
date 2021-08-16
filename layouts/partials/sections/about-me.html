@@ -1,8 +1,8 @@
 <section class="section about-me" id="about-me">
     <div class="wrapper">
-        <ul>
+        <ul class="fact-list">
         {{- range $index, $value := (where .Site.RegularPages "Type" "facts") -}}
-            <li>
+            <li class="fact">
                 <div class="mask mask-about-me--head">
                     <div data-overlay></div>
                     <h2 class="h4 headline">About me</h2>
@@ -22,6 +22,29 @@
                             <div class="content">{{ .Content }}</div>
                         </div>
                         <div class="section-text">About</div>
+                        <div class="mask mask-about-me technology" data-overlay>
+                            <h4 class="h4 headline">Technologies I've learned</h4>
+                            <ul class="technologies">
+                                <li class="html">
+                                    <span>HTML</span>
+                                </li>
+                                <li class="css">
+                                    <span>CSS</span>
+                                </li>
+                                <li class="java-script">
+                                    <span>JS</span>
+                                </li>
+                                <li class="symfony">
+                                    <span>Symfony</span>
+                                </li>
+                                <li class="php">
+                                    <span>PHP</span>
+                                </li>
+                                <li class="mysql">
+                                    <span>MySQL</span>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="image-container">
                         <img src="/logo1.png" alt="{{ .Title }}">

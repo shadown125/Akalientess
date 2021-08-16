@@ -3,9 +3,9 @@
 
 .about-me {
     overflow: hidden;
-    ul {
+    .fact-list {
         @include list.reset-list();
-        li {
+        .fact {
             margin: {
                 bottom: susanoo.rem-calc(80);
             }
@@ -39,6 +39,11 @@
                 .image-container {
                     left: -50%;
                 }
+                .technology {
+                    margin: {
+                        left: auto;
+                    }
+                }
             }
         }
     }
@@ -58,6 +63,8 @@
     }
     .container {
         position: relative;
+        display: flex;
+        flex-direction: column;
         @include susanoo.breakpoint(medium) {
             min-height: 70vh;
             max: {
@@ -134,6 +141,13 @@
             left: susanoo.rem-calc(-200);
             font: {
                 size: susanoo.rem-calc(360);
+            }
+        }
+    }
+    .technology {
+        .headline {
+            margin: {
+                top: susanoo.rem-calc(48);
             }
         }
     }
