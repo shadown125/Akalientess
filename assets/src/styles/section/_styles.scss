@@ -16,6 +16,20 @@
         padding: {
             right: susanoo.rem-calc(16);
         }
+        .headline {
+            opacity: 0;
+        }
+        .content {
+            opacity: 0;
+        }
+        &.mask-revealed {
+            .headline {
+                opacity: 1;
+            }
+            .content {
+                opacity: 1;
+            }
+        }
         .author {
             font: {
                 style: italic;
@@ -25,15 +39,25 @@
             }
         }
     }
+    .mask-about-me {
+        .content {
+            opacity: 0;
+        }
+        &.mask-revealed {
+            .content {
+                opacity: 1;
+            }
+        }
+    }
     .overlay {
         display: block;
         position: absolute;
         background-color: #fff;
         top: susanoo.rem-calc(-10);
-        width: 100%;
+        width: 0;
         height: 100%;
         box-sizing: border-box;
-        animation: overlayText .75s ease-in-out;
+        animation: overlayText 1.5s ease-in-out;
         &.is-revealed {
             opacity: 0;
         }
@@ -42,6 +66,10 @@
 
 @keyframes overlayText {
     0% {
+        width: 0;
+    }
+    50% {
+        width: 100%;
         left: 0
     }
     100% {
