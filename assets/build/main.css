@@ -823,11 +823,15 @@ textarea:focus-visible {
 .about-me .fact-list .fact:nth-child(odd) .image-container {
   left: 0;
 }
-.about-me .fact-list .fact:nth-child(even) .mask-about-me--second-head {
-  margin-left: auto;
+@media only screen and (min-width: 40em) {
+  .about-me .fact-list .fact:nth-child(even) .mask-about-me--second-head {
+    margin-left: auto;
+  }
 }
-.about-me .fact-list .fact:nth-child(even) .title {
-  margin-left: auto;
+@media only screen and (min-width: 40em) {
+  .about-me .fact-list .fact:nth-child(even) .title {
+    margin-left: auto;
+  }
 }
 .about-me .fact-list .fact:nth-child(even) .container {
   left: 50%;
@@ -873,6 +877,7 @@ textarea:focus-visible {
   }
 }
 .about-me .mask-about-me {
+  width: unset;
   position: relative;
   overflow: hidden;
 }
