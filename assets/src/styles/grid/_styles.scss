@@ -1,5 +1,13 @@
 @use '../susanoo-functions' as susanoo;
 
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-y: scroll;
+}
+
 .wrapper {
     max: {
         width: susanoo.rem-calc(1440);
