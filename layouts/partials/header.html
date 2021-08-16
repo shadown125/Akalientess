@@ -2,7 +2,7 @@
     <div class="wrapper">
         <div class="inner-wrapper">
             <nav class="main-navigation">
-                <a href="#">
+                <a href="{{ .Site.BaseURL }}">
                     <img src="{{ (resources.Get "build/logo1.png").RelPermalink }}" alt="Logo" class="logo">
                 </a>
                 <button class="button-menu" data-button-menu>
@@ -20,7 +20,7 @@
                     </button>
                     <ul class="home-links">
                         <li class="home">
-                            <a href="#" class="link" data-nav-link>Home</a>
+                            <a href="{{ .Site.BaseURL }}" class="link" data-nav-link>Home</a>
                         </li>
                         <li>
                             <a href="#about-me" class="link" data-nav-link>About Me</a>
