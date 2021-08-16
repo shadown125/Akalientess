@@ -127,6 +127,22 @@
     }
 }
 
+.page-header {
+    .button-close {
+        :is(span) {
+            background: {
+                color: #dbdce4;
+            }
+        }
+        &:hover {
+            .first-label,
+            .second-label {
+                animation: button-close-background-color-grey .5s cubic-bezier(.694,.048,.335,1);
+            }
+        }
+    }
+}
+
 .button-close {
     display: none;
     position: relative;
@@ -140,18 +156,18 @@
     &:hover {
         .first-label {
             transform: rotate(-45deg);
-            animation: button-close-background-color .4s cubic-bezier(.694,.048,.335,1);
+            animation: button-close-background-color .5s cubic-bezier(.694,.048,.335,1);
         }
         .second-label {
             transform: rotate(45deg);
-            animation: button-close-background-color .4s cubic-bezier(.694,.048,.335,1);
+            animation: button-close-background-color .5s cubic-bezier(.694,.048,.335,1);
         }
     }
     :is(span) {
         display: block;
         height: 4px;
         background: {
-            color: #dbdce4;
+            color: var(--color-black-primary)
         }
     }
     .first-label {

@@ -1,0 +1,24 @@
+<div class="contact" data-contact-section>
+    <div class="contact-container">
+        <button class="button-close" data-nav-contact>
+            <span class="first-label"></span>
+            <span class="second-label"></span>
+        </button>
+        <h2 class="h4 headline">Short Introduction</h2>
+        <div class="content">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusantium asperiores aspernatur, consectetur dolorum ducimus ex
+            excepturi itaque iusto libero natus pariatur quae quaerat quasi quibusdam repellendus saepe sit ullam?
+        </div>
+        <div class="mail">
+            If you want to Contact me through E-Mail then please use this one: <a href="mailto:dawidoleksiuk@wp.pl" class="link">Send me Mail</a>
+        </div>
+        <div>Otherwise you can contact me through social links below</div>
+        <div class="section-text">About</div>
+    </div>
+    <div class="footer contact-footer">
+        <div class="container">
+            <div class="copyright">&copy; {{ dateFormat "2006" now  }} All rights reserved by Dawid Oleksiuk</div>
+            {{ partial "social-links.html" . }}
+        </div>
+    </div>
+</div>

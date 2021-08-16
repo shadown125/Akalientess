@@ -1,6 +1,24 @@
 @keyframes button-close-background-color {
     0% {
         background: {
+            color: var(--color-black-primary)
+        }
+    }
+    50% {
+        background: {
+            color: #ff6767;
+        }
+    }
+    100% {
+        background: {
+            color: var(--color-black-primary)
+        }
+    }
+}
+
+@keyframes button-close-background-color-grey {
+    0% {
+        background: {
             color: #dbdce4;
         }
     }

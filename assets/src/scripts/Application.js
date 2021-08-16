@@ -15,8 +15,17 @@ export default class Application {
         const navigationContainer = document.querySelector('[data-navigation-container]');
         const mobileContainerAnimation = document.querySelector('[data-mobile-container-animation]');
         const navLinks = document.querySelectorAll('[data-nav-link]');
+        const navContactButton = document.querySelectorAll('[data-nav-contact]');
+        const contactSection = document.querySelector('[data-contact-section]');
 
-        new NavigationEvents(closeButton, menuButton, navigationContainer, mobileContainerAnimation, navLinks);
+        new NavigationEvents(closeButton,
+            menuButton,
+            navigationContainer,
+            mobileContainerAnimation,
+            navLinks,
+            navContactButton,
+            contactSection
+        );
     }
     #initOverlaysAnimations() {
         const rareOverlays = document.querySelectorAll('[data-overlay]');

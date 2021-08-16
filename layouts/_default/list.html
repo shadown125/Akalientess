@@ -3,6 +3,7 @@
     {{ partial "sections/about-me.html" . }}
     {{ partial "sections/projects.html" . }}
     {{ partial "sections/projects-external.html" . }}
+    {{ partial "contact.html" . }}
 <ul>
     {{- range where .Site.RegularPages "Type" "pattern-library" -}}
     <li>

@@ -79,7 +79,8 @@
                     padding: {
                         left: susanoo.rem-calc(60);
                     }
-                    a {
+                    a,
+                    button {
                         color: var(--color-on-primary);
                         font: {
                             size: susanoo.rem-calc(30);
@@ -154,30 +155,14 @@
         }
     }
     button {
+        @media (max-width: 40em) {
+            text-align: start;
+        }
         background: {
             color: transparent;
         }
         border: unset;
         cursor: pointer;
-        &::before {
-            bottom: susanoo.rem-calc(20);
-        }
-        &::after {
-            bottom: susanoo.rem-calc(20);
-        }
-        .icon {
-            display: block;
-            width: susanoo.rem-calc(20);
-            &::before {
-                @include susanoo.icon(icon.$icon-half-moon);
-                font: {
-                    size: susanoo.rem-calc(56);
-                }
-                margin: {
-                    left: susanoo.rem-calc(-18);
-                }
-            }
-        }
     }
     img {
         color: var(--color-on-primary);
