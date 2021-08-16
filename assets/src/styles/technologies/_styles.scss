@@ -1,0 +1,81 @@
+@use '../susanoo-functions' as susanoo;
+@use '../reset-list' as list;
+@use '../icons' as icon;
+@use 'variables';
+
+.section {
+    .technologies {
+        @include list.reset-list();
+        display: flex;
+        flex: {
+            wrap: wrap;
+        }
+        span {
+            display: none;
+        }
+        li {
+            margin: {
+                top: susanoo.rem-calc(10);
+            }
+            &::after {
+                @include susanoo.icon(null, false);
+                font: {
+                    size: susanoo.rem-calc(36);
+                }
+                margin: {
+                    right: susanoo.rem-calc(32);
+                }
+            }
+        }
+        .html {
+            &::after {
+                @include susanoo.icon(icon.$icon-html, true);
+                color: variables.$color-html;
+            }
+        }
+        .css {
+            &::after {
+                @include susanoo.icon(icon.$icon-css, true);
+                color: variables.$color-css;
+            }
+        }
+        .java-script {
+            &::after {
+                @include susanoo.icon(icon.$icon-js, true);
+                color: variables.$color-js-node;
+            }
+        }
+        .symfony {
+            &::after {
+                @include susanoo.icon(icon.$icon-symfony, true);
+            }
+        }
+        .php {
+            &::after {
+                @include susanoo.icon(icon.$icon-php, true);
+                color: variables.$color-php;
+            }
+        }
+        .mysql {
+            &::after {
+                @include susanoo.icon(icon.$icon-mysql, true);
+                color: variables.$color-mysql;
+            }
+        }
+    }
+
+    .technology {
+        margin: {
+            top: auto;
+            bottom: susanoo.rem-calc(-56);
+        }
+        opacity: 0;
+        transition: opacity .35s linear, margin-bottom .35s linear;
+        &.mask-revealed {
+            opacity: 1;
+            margin: {
+                bottom: susanoo.rem-calc(56);
+            }
+        }
+    }
+}

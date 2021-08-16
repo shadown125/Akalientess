@@ -17,6 +17,8 @@ export class OverlaysAnimations {
                     if (entry.target.classList.contains('link-project')) {
                         entry.target.classList.add('overlay-project');
                         entry.target.classList.add('is-revealed');
+                    } else if (entry.target.classList.contains('mask')) {
+                        entry.target.classList.add('mask-revealed');
                     } else {
                         entry.target.classList.add('overlay');
                         setTimeout(() => {

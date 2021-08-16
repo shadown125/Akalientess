@@ -803,42 +803,45 @@ textarea:focus-visible {
 .about-me {
   overflow: hidden;
 }
-.about-me ul {
+.about-me .fact-list {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-.about-me ul li {
+.about-me .fact-list li {
   margin: 0;
 }
-.about-me ul li::before {
+.about-me .fact-list li::before {
   content: none;
 }
-.about-me ul li {
+.about-me .fact-list .fact {
   margin-bottom: 5rem;
 }
-.about-me ul li:nth-child(odd) .container {
+.about-me .fact-list .fact:nth-child(odd) .container {
   left: 0;
 }
-.about-me ul li:nth-child(odd) .image-container {
+.about-me .fact-list .fact:nth-child(odd) .image-container {
   left: 0;
 }
-.about-me ul li:nth-child(even) .mask-about-me--second-head {
+.about-me .fact-list .fact:nth-child(even) .mask-about-me--second-head {
   margin-left: auto;
 }
-.about-me ul li:nth-child(even) .title {
+.about-me .fact-list .fact:nth-child(even) .title {
   margin-left: auto;
 }
-.about-me ul li:nth-child(even) .container {
+.about-me .fact-list .fact:nth-child(even) .container {
   left: 50%;
 }
 @media (max-width: 40em) {
-  .about-me ul li:nth-child(even) .container {
+  .about-me .fact-list .fact:nth-child(even) .container {
     left: 0;
   }
 }
-.about-me ul li:nth-child(even) .image-container {
+.about-me .fact-list .fact:nth-child(even) .image-container {
   left: -50%;
+}
+.about-me .fact-list .fact:nth-child(even) .technology {
+  margin-left: auto;
 }
 .about-me > * {
   color: var(--color-black-primary);
@@ -852,6 +855,8 @@ textarea:focus-visible {
 }
 .about-me .container {
   position: relative;
+  display: flex;
+  flex-direction: column;
 }
 @media only screen and (min-width: 40em) {
   .about-me .container {
@@ -921,6 +926,120 @@ textarea:focus-visible {
     left: -12.5rem;
     font-size: 22.5rem;
   }
+}
+.about-me .technology .headline {
+  margin-top: 3rem;
+}
+
+.section .technologies {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+.section .technologies li {
+  margin: 0;
+}
+.section .technologies li::before {
+  content: none;
+}
+.section .technologies span {
+  display: none;
+}
+.section .technologies li {
+  margin-top: 0.625rem;
+}
+.section .technologies li::after {
+  font-size: 2.25rem;
+  margin-right: 2rem;
+}
+.section .technologies .html::after {
+  content: "";
+  font-family: "icomoon";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  speak: never;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #f06529;
+}
+.section .technologies .css::after {
+  content: "";
+  font-family: "icomoon";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  speak: never;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #66d3fa;
+}
+.section .technologies .java-script::after {
+  content: "";
+  font-family: "icomoon";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  speak: never;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #393;
+}
+.section .technologies .symfony::after {
+  content: "";
+  font-family: "icomoon";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  speak: never;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.section .technologies .php::after {
+  content: "";
+  font-family: "icomoon";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  speak: never;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #777bb4;
+}
+.section .technologies .mysql::after {
+  content: "";
+  font-family: "icomoon";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  speak: never;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #4479a1;
+}
+.section .technology {
+  margin-top: auto;
+  margin-bottom: -3.5rem;
+  opacity: 0;
+  transition: opacity 0.35s linear, margin-bottom 0.35s linear;
+}
+.section .technology.mask-revealed {
+  opacity: 1;
+  margin-bottom: 3.5rem;
 }
 
 .staging {
