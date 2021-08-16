@@ -3,13 +3,18 @@ export class NavigationEvents {
     #menuButton;
     #navigationContainer;
     #mobileContainerAnimation;
+    #navLinks;
 
-    constructor(closeButton, menuButton, navigationContainer, mobileContainerAnimation) {
+    constructor(closeButton, menuButton, navigationContainer, mobileContainerAnimation, navLinks) {
         this.#closeButton = closeButton;
         this.#menuButton = menuButton;
         this.#navigationContainer = navigationContainer;
         this.#mobileContainerAnimation = mobileContainerAnimation;
+        this.#navLinks = navLinks;
 
+        this.#navLinks.forEach((item) => {
+            item.addEventListener('click', this.#addRemoveClass.bind(this));
+        })
         this.#closeButton.addEventListener('click', this.#addRemoveClass.bind(this));
         this.#menuButton.addEventListener('click', this.#addRemoveClass.bind(this));
     }
