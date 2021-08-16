@@ -658,7 +658,7 @@ textarea:focus-visible {
     height: 100vh;
     transition: all 1s ease-in-out;
     background-image: linear-gradient(270deg, #235aa6, #101b3b);
-    z-index: 2;
+    z-index: 6;
   }
   .main-navigation .container .home-links {
     visibility: hidden;
