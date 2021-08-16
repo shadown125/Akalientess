@@ -20,14 +20,18 @@
             &:nth-child(even) {
                 .mask-about-me {
                     &--second-head {
-                        margin: {
-                            left: auto;
+                        @include susanoo.breakpoint(medium) {
+                            margin: {
+                                left: auto;
+                            }
                         }
                     }
                 }
                 .title {
-                    margin: {
-                        left: auto;
+                    @include susanoo.breakpoint(medium) {
+                        margin: {
+                            left: auto;
+                        }
                     }
                 }
                 .container {
