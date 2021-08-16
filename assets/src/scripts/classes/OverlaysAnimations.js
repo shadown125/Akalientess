@@ -17,13 +17,15 @@ export class OverlaysAnimations {
                     if (entry.target.classList.contains('link-project')) {
                         entry.target.classList.add('overlay-project');
                         entry.target.classList.add('is-revealed');
-                    } else if (entry.target.classList.contains('mask')) {
-                        entry.target.classList.add('mask-revealed');
+                    } else if (entry.target.classList.contains('mask') || entry.target.classList.contains('mask-about-me')) {
+                        setTimeout(() => {
+                            entry.target.classList.add('mask-revealed');
+                        }, 750)
                     } else {
                         entry.target.classList.add('overlay');
                         setTimeout(() => {
                             entry.target.classList.add('is-revealed');
-                        }, 700)
+                        }, 1450)
                     }
                 })
             }

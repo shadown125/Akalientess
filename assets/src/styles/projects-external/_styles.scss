@@ -1,5 +1,6 @@
 @use '../susanoo-functions' as susanoo;
 @use 'variables';
+@use 'animations';
 
 .projects-external {
     ul {
@@ -44,11 +45,13 @@
         }
         .overlay {
             position: absolute;
+            width: 100%;
             top: 0;
             left: 0;
             background: {
                 image: linear-gradient(270deg, variables.$overlay-linear-gradient-1, variables.$overlay-linear-gradient-2);
             }
+            animation: overlayTextPE 1.5s ease-in-out;
         }
     }
     .link-project {
