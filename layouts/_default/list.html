@@ -6,7 +6,7 @@
 <ul>
     {{- range where .Site.RegularPages "Type" "pattern-library" -}}
     <li>
-        <a href="{{ .Permalink }}"s>{{.Title}}</a>
+        <a href="{{ .Permalink }}">{{.Title}}</a>
     </li>
     {{- end -}}
 </ul>
