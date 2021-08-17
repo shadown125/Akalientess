@@ -23,7 +23,7 @@
     a {
         text-decoration: none;
         &::before {
-            @include susanoo.icon(null, true);
+            @include susanoo.icon(null, false);
             color: variables.$icon-color;
             padding: susanoo.rem-calc(16);
             font: {
