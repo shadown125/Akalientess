@@ -3,6 +3,6 @@ title: Competetive Player
 
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-Aperiam at beatae cupiditate, enim error ex id maiores quae quia recusandae repudiandae totam veritatis
-voluptatem. Iure, iusto reprehenderit. Officiis, quas repellendus.
+I started to play games as a kid. 
+Then I discovered League of Legends and other Competitive games that pushed me to will of becoming the best.
+After several years I was become one of the world's best Akali players.
