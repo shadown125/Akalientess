@@ -751,10 +751,20 @@ textarea:focus-visible {
   position: absolute;
   overflow: hidden;
   top: 0;
-  left: 31.25rem;
+  left: 3.75rem;
   font-size: 10rem;
   color: var(--grey-light);
   opacity: 0.4;
+}
+@media only screen and (min-width: 40em) {
+  .contact .contact-container .section-text {
+    left: 12.5rem;
+  }
+}
+@media only screen and (min-width: 64em) {
+  .contact .contact-container .section-text {
+    left: 31.25rem;
+  }
 }
 .contact .contact-container .mail {
   margin-top: auto;

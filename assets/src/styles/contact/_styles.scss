@@ -102,12 +102,18 @@
             position: absolute;
             overflow: hidden;
             top: 0;
-            left: susanoo.rem-calc(500);
+            left: susanoo.rem-calc(60);
             font: {
                 size: susanoo.rem-calc(160);
             }
             color: var(--grey-light);
             opacity: .4;
+            @include susanoo.breakpoint(medium) {
+                left: susanoo.rem-calc(200);
+            }
+            @include susanoo.breakpoint(large-m) {
+                left: susanoo.rem-calc(500);
+            }
         }
         .mail {
             margin: {
