@@ -1298,7 +1298,7 @@ textarea:focus-visible {
     display: block;
     color: white;
     position: absolute;
-    bottom: 1.25rem;
+    top: 90%;
     left: 21.25rem;
     max-width: 25rem;
     opacity: 0;
@@ -1361,7 +1361,7 @@ textarea:focus-visible {
 @media only screen and (min-width: 64em) {
   .projects li:nth-child(odd) a.is-revealed + .description {
     opacity: 1;
-    bottom: 14%;
+    top: 10%;
     left: 60%;
     color: var(--color-black-primary);
     font-size: 1.875rem;
@@ -1384,7 +1384,7 @@ textarea:focus-visible {
 @media only screen and (min-width: 64em) {
   .projects li:nth-child(even) a.is-revealed + .description {
     opacity: 1;
-    bottom: 14%;
+    top: 10%;
     left: 0;
     color: var(--color-black-primary);
     font-size: 1.875rem;
@@ -1598,15 +1598,6 @@ textarea:focus-visible {
   text-decoration: none;
 }
 .social-list a::before {
-  font-family: "icomoon";
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  speak: never;
-  text-transform: none;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   color: #b0b2c3;
   padding: 1rem;
   font-size: 1.5rem;

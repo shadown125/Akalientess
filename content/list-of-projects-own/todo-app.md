@@ -5,6 +5,5 @@ imageName: todoApp
 credits: One of my First projects
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias consequatur consequuntur cumque
-dolores fugiat hic modi nam numquam porro quo. A accusantium aliquid, eos facere 
-itaque molestias nemo officiis unde!
+This app had 3 version. The first one got me my first job as web developer but I don't wanna stop.
+I started to develope second version and after that third final version.
