@@ -661,7 +661,7 @@ textarea:focus-visible {
   top: 0;
   left: 0;
   z-index: 3;
-  transition: all 0.3s, background-color 0.3s;
+  transition: opacity 0.3s, background-color 0.3s;
   opacity: 0;
   visibility: hidden;
 }
@@ -669,8 +669,12 @@ textarea:focus-visible {
   opacity: 1;
   visibility: visible;
 }
+.contact.is-active .contact-container {
+  top: 0;
+}
 .contact.is-active .contact-footer {
   opacity: 1;
+  left: 0;
 }
 @supports ((-webkit-backdrop-filter: blur(0.625rem)) or (backdrop-filter: blur(0.625rem))) {
   .contact {
@@ -678,6 +682,9 @@ textarea:focus-visible {
     backdrop-filter: blur(0.625rem);
     background-color: rgba(0, 0, 0, 0.3);
   }
+}
+.contact .container {
+  overflow: hidden;
 }
 .contact .contact-container {
   display: flex;
@@ -687,6 +694,8 @@ textarea:focus-visible {
   width: 80vw;
   background-color: #f0f0f0;
   overflow: hidden;
+  top: -31.25rem;
+  transition: top 0.5s linear 0.3s;
 }
 @media (max-width: 40em) {
   .contact .contact-container {
@@ -758,8 +767,11 @@ textarea:focus-visible {
   color: #ff6767;
 }
 .contact .contact-footer {
+  position: relative;
   padding: 0 2rem;
   opacity: 0;
+  left: 56.25rem;
+  transition: left 0.5s linear 0.3s;
 }
 @media (max-width: 40em) {
   .contact .contact-footer {

@@ -10,20 +10,27 @@
     top: 0;
     left: 0;
     z-index: 3;
-    transition: all 0.3s, background-color 0.3s;
+    transition: opacity 0.3s, background-color 0.3s;
     opacity: 0;
     visibility: hidden;
     &.is-active {
         opacity: 1;
         visibility: visible;
+        .contact-container {
+            top: 0;
+        }
         .contact-footer {
             opacity: 1;
+            left: 0;
         }
     }
     @supports (-webkit-backdrop-filter: blur(#{susanoo.rem-calc(10)})) or (backdrop-filter: blur(#{susanoo.rem-calc(10)})) {
         -webkit-backdrop-filter: blur(#{susanoo.rem-calc(10)});
         backdrop-filter: blur(#{susanoo.rem-calc(10)});
         background-color: rgba(black, 0.3);
+    }
+    .container {
+        overflow: hidden;
     }
     .contact-container {
         display: flex;
@@ -39,6 +46,8 @@
             color: #f0f0f0;
         }
         overflow: hidden;
+        top: susanoo.rem-calc(-500);
+        transition: top 0.5s linear 0.6s;
         @media (max-width: 40em) {
             width: unset;
             margin: 0 susanoo.rem-calc(10);
@@ -114,6 +123,11 @@
         }
     }
     .contact-footer {
+        position: relative;
+        padding: 0 susanoo.rem-calc(32);
+        opacity: 0;
+        left: susanoo.rem-calc(900);
+        transition: left 0.5s linear 0.6s;
         @media (max-width: 40em) {
             margin: 0 susanoo.rem-calc(10);
         }
@@ -135,7 +149,5 @@
                 }
             }
         }
-        padding: 0 susanoo.rem-calc(32);
-        opacity: 0;
     }
 }
