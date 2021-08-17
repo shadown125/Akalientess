@@ -5,4 +5,11 @@
     background: {
         color: var(--color-black-primary);
     }
+    &.is-revealed {
+        .main-navigation {
+            visibility: visible;
+            opacity: 1;
+            top: 0;
+        }
+    }
 }

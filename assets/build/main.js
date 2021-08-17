@@ -73,7 +73,8 @@ function _initNavigationEvents2() {
 
 function _initOverlaysAnimations2() {
   var rareOverlays = document.querySelectorAll('[data-overlay]');
-  new _classes_OverlaysAnimations__WEBPACK_IMPORTED_MODULE_6__.OverlaysAnimations(rareOverlays);
+  var secondOverlays = document.querySelectorAll('[data-second-overlay]');
+  new _classes_OverlaysAnimations__WEBPACK_IMPORTED_MODULE_6__.OverlaysAnimations(rareOverlays, secondOverlays);
 }
 
 function _initParticle2() {
@@ -306,12 +307,18 @@ function _classApplyDescriptorSet(receiver, descriptor, value) { if (descriptor.
 
 var _rareOverlays = /*#__PURE__*/new WeakMap();
 
+var _secondOverlays = /*#__PURE__*/new WeakMap();
+
 var _addOverlayClass = /*#__PURE__*/new WeakSet();
 
-var OverlaysAnimations = function OverlaysAnimations(rareOverlays) {
+var _addSecondOverlayClass = /*#__PURE__*/new WeakSet();
+
+var OverlaysAnimations = function OverlaysAnimations(rareOverlays, secondOverlays) {
   var _this = this;
 
   _classCallCheck(this, OverlaysAnimations);
+
+  _addSecondOverlayClass.add(this);
 
   _addOverlayClass.add(this);
 
@@ -320,7 +327,18 @@ var OverlaysAnimations = function OverlaysAnimations(rareOverlays) {
     value: void 0
   });
 
+  _secondOverlays.set(this, {
+    writable: true,
+    value: void 0
+  });
+
   _classPrivateFieldSet(this, _rareOverlays, rareOverlays);
+
+  _classPrivateFieldSet(this, _secondOverlays, secondOverlays);
+
+  _classPrivateFieldGet(this, _secondOverlays).forEach(function (item) {
+    _classPrivateMethodGet(_this, _addSecondOverlayClass, _addSecondOverlayClass2).call(_this, item);
+  });
 
   _classPrivateFieldGet(this, _rareOverlays).forEach(function (item) {
     _classPrivateMethodGet(_this, _addOverlayClass, _addOverlayClass2).call(_this, item);
@@ -344,6 +362,21 @@ function _addOverlayClass2(item) {
             entry.target.classList.add('is-revealed');
           }, 1450);
         }
+      });
+    }
+  };
+
+  var observer = new IntersectionObserver(onIntersection, {
+    threshold: 0.25
+  });
+  observer.observe(item);
+}
+
+function _addSecondOverlayClass2(item) {
+  var onIntersection = function onIntersection(entries) {
+    if (entries[0]['intersectionRatio'] !== 0) {
+      entries.forEach(function (entry) {
+        entry.target.classList.add('is-revealed');
       });
     }
   };

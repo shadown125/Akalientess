@@ -29,8 +29,9 @@ export default class Application {
     }
     #initOverlaysAnimations() {
         const rareOverlays = document.querySelectorAll('[data-overlay]');
+        const secondOverlays = document.querySelectorAll('[data-second-overlay]');
 
-        new OverlaysAnimations(rareOverlays);
+        new OverlaysAnimations(rareOverlays, secondOverlays);
     }
     #initParticle() {
         const canvas = document.querySelector('[data-canvas]');

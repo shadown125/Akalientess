@@ -804,10 +804,15 @@ textarea:focus-visible {
 }
 
 .main-navigation {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
   min-height: 10vh;
+  top: -12.5rem;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.5s linear 1s;
 }
 .main-navigation .mobile-animation {
   visibility: hidden;
@@ -960,6 +965,11 @@ textarea:focus-visible {
 
 .page-header {
   background-color: var(--color-black-primary);
+}
+.page-header.is-revealed .main-navigation {
+  visibility: visible;
+  opacity: 1;
+  top: 0;
 }
 
 .about-me {
@@ -1257,6 +1267,17 @@ textarea:focus-visible {
   background-repeat: no-repeat;
   background-position: 5% 30%;
 }
+.staging .social-list {
+  bottom: -12.5rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s linear 1s;
+}
+.staging .social-list.is-revealed {
+  bottom: 0;
+  opacity: 1;
+  visibility: visible;
+}
 
 .projects .description {
   display: none;
@@ -1547,8 +1568,7 @@ textarea:focus-visible {
   padding: 0;
   display: grid;
   align-content: center;
-  position: sticky;
-  top: 1rem;
+  position: relative;
   height: 100%;
   margin-left: auto;
 }
