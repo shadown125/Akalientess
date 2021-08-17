@@ -45,4 +45,43 @@
             visibility: visible;
         }
     }
+    .start-link {
+        position: absolute;
+        bottom: 5%;
+        left: 50%;
+        opacity: 0;
+        transform: translateX(-50%);
+        animation: bouncing 3s ease-in-out infinite 1s;
+        transition: opacity 1s linear 1s;
+        &.is-revealed {
+            opacity: 1;
+        }
+        a {
+            &:hover {
+                &::before {
+                    color: #ff6767;
+                }
+            }
+            &::before {
+                @include susanoo.icon(icon.$arrow-down);
+                font: {
+                    size: susanoo.rem-calc(46);
+                }
+                color: #667EEA;
+                transition: color .2s linear;
+            }
+        }
+    }
+}
+
+@keyframes bouncing {
+    0% {
+        bottom: 5%;
+    }
+    50% {
+        bottom: 8%;
+    }
+    100% {
+        bottom: 5%;
+    }
 }
