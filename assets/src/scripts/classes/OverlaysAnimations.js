@@ -2,17 +2,22 @@ export class OverlaysAnimations {
 
     #rareOverlays;
     #secondOverlays;
+    #loadingMask;
 
-    constructor(rareOverlays, secondOverlays) {
+    constructor(rareOverlays, secondOverlays, loadingMask) {
         this.#rareOverlays = rareOverlays;
         this.#secondOverlays = secondOverlays;
+        this.#loadingMask = loadingMask;
 
         this.#secondOverlays.forEach((item) => {
             this.#addSecondOverlayClass(item);
-        })
+        });
+
         this.#rareOverlays.forEach((item) => {
             this.#addOverlayClass(item);
-        })
+        });
+
+        window.addEventListener('DOMContentLoaded', this.#removeLoadingMask.bind(this))
     }
 
     #addOverlayClass(item) {
@@ -57,5 +62,9 @@ export class OverlaysAnimations {
         });
 
         observer.observe(item);
+    }
+
+    #removeLoadingMask() {
+        this.#loadingMask.classList.add('is-loaded')
     }
 }

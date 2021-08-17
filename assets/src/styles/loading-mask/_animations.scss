@@ -1,0 +1,35 @@
+@keyframes loading-1 {
+    0% {
+        width: 0;
+    }
+    25% {
+        width: 100%;
+    }
+    50% {
+        left: 100%;
+    }
+    75% {
+        left: 0;
+    }
+    100% {
+        width: 0;
+    }
+}
+
+@keyframes loading-2 {
+    0% {
+        width: 0;
+    }
+    25% {
+        width: 100%;
+    }
+    50% {
+        left: 100%;
+    }
+    75% {
+        left: 0;
+    }
+    100% {
+        width: 0;
+    }
+}
