@@ -7,7 +7,13 @@
     }
     &.about-me {
         padding: {
-            top: susanoo.rem-calc(180);
+            bottom: 0;
+        }
+        @include susanoo.breakpoint(medium) {
+            padding: {
+                top: susanoo.rem-calc(180);
+            }
+
         }
     }
     .mask {
