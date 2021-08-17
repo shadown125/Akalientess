@@ -5,6 +5,11 @@
     @include susanoo.breakpoint(large-m) {
         padding: susanoo.rem-calc(50);
     }
+    &.about-me {
+        padding: {
+            top: susanoo.rem-calc(180);
+        }
+    }
     .mask {
         &:not(&.long-text) {
             @include susanoo.breakpoint(medium) {

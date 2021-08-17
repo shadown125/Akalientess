@@ -43,9 +43,11 @@
                 .image-container {
                     left: -50%;
                 }
-                .technology {
-                    margin: {
-                        left: auto;
+                @include susanoo.breakpoint(medium) {
+                    .technology {
+                        margin: {
+                            left: auto;
+                        }
                     }
                 }
             }
