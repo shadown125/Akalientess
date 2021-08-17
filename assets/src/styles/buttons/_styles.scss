@@ -191,17 +191,20 @@
         right: susanoo.rem-calc(20);
         left: susanoo.rem-calc(20);
     }
-    > div {
+    > .line-container {
         width: susanoo.rem-calc(44);
         height: susanoo.rem-calc(22);
         display: block;
         position: relative;
+        background: {
+            color: unset;
+        }
     }
     @include susanoo.breakpoint(medium) {
         display: none;
     }
     &:hover {
-        :is(span) {
+        :is(.first-label, .second-label, .third-label) {
             border: {
                 radius: susanoo.rem-calc(20);
             }

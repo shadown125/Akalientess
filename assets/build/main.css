@@ -377,18 +377,19 @@ select {
   margin-right: 1.25rem;
   margin-left: 1.25rem;
 }
-.button-menu > div {
+.button-menu > .line-container {
   width: 2.75rem;
   height: 1.375rem;
   display: block;
   position: relative;
+  background-color: unset;
 }
 @media only screen and (min-width: 40em) {
   .button-menu {
     display: none;
   }
 }
-.button-menu:hover :is(span) {
+.button-menu:hover :is(.first-label, .second-label, .third-label) {
   border-radius: 1.25rem;
   animation: button-menu-hover-background-color 8s cubic-bezier(0.694, 0.048, 0.335, 1) infinite;
 }
