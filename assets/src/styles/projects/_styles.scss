@@ -12,7 +12,7 @@
             display: block;
             color: white;
             position: absolute;
-            bottom: susanoo.rem-calc(20);
+            top: 90%;
             left: susanoo.rem-calc(340);
             max-width: susanoo.rem-calc(400);
             opacity: 0;
@@ -75,7 +75,7 @@
                     @include susanoo.breakpoint(large-m) {
                         + .description {
                             opacity: 1;
-                            bottom: 14%;
+                            top: 10%;
                             left: 60%;
                             color: var(--color-black-primary);
                             font: {
@@ -104,7 +104,7 @@
                     @include susanoo.breakpoint(large-m) {
                         + .description {
                             opacity: 1;
-                            bottom: 14%;
+                            top: 10%;
                             left: 0;
                             color: var(--color-black-primary);
                             font: {
