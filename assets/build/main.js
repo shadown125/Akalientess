@@ -349,7 +349,7 @@ function _addOverlayClass2(item) {
   };
 
   var observer = new IntersectionObserver(onIntersection, {
-    threshold: 0.5
+    threshold: 0.25
   });
   observer.observe(item);
 }

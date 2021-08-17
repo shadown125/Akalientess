@@ -996,8 +996,10 @@ textarea:focus-visible {
 .about-me .fact-list .fact:nth-child(even) .image-container {
   left: -50%;
 }
-.about-me .fact-list .fact:nth-child(even) .technology {
-  margin-left: auto;
+@media only screen and (min-width: 40em) {
+  .about-me .fact-list .fact:nth-child(even) .technology {
+    margin-left: auto;
+  }
 }
 .about-me > * {
   color: var(--color-black-primary);
@@ -1194,9 +1196,29 @@ textarea:focus-visible {
   opacity: 0;
   transition: opacity 0.35s linear, margin-bottom 0.35s linear;
 }
+@media (max-width: 40em) {
+  .section .technology {
+    margin-bottom: -3.5rem;
+  }
+}
+@media only screen and (min-width: 40em) {
+  .section .technology {
+    margin-bottom: 3.5rem;
+  }
+}
 .section .technology.mask-revealed {
   opacity: 1;
-  margin-bottom: 16rem;
+  margin-bottom: 3.5rem;
+}
+@media only screen and (min-width: 40em) {
+  .section .technology.mask-revealed {
+    margin-bottom: 7.5rem;
+  }
+}
+@media only screen and (min-width: 64em) {
+  .section .technology.mask-revealed {
+    margin-bottom: 16rem;
+  }
 }
 
 .staging {
@@ -1648,6 +1670,9 @@ textarea:focus-visible {
   .section {
     padding: 3.125rem;
   }
+}
+.section.about-me {
+  padding-top: 11.25rem;
 }
 .section .mask {
   position: relative;

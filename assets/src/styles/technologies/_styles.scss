@@ -65,6 +65,16 @@
     }
 
     .technology {
+        @media (max-width: 40em) {
+            margin: {
+                bottom: susanoo.rem-calc(-56);
+            }
+        }
+        @include susanoo.breakpoint(medium) {
+            margin: {
+                bottom: susanoo.rem-calc(56);
+            }
+        }
         margin: {
             top: auto;
             bottom: susanoo.rem-calc(156);
@@ -74,7 +84,17 @@
         &.mask-revealed {
             opacity: 1;
             margin: {
-                bottom: susanoo.rem-calc(256);
+                bottom: susanoo.rem-calc(56);
+            }
+            @include susanoo.breakpoint(medium) {
+                margin: {
+                    bottom: susanoo.rem-calc(120);
+                }
+            }
+            @include susanoo.breakpoint(large-m) {
+                margin: {
+                    bottom: susanoo.rem-calc(256);
+                }
             }
         }
     }
