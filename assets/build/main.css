@@ -1174,6 +1174,11 @@ textarea:focus-visible {
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+.about-me .image-container img.is-revealed {
+  opacity: 1;
 }
 .about-me .section-text {
   position: absolute;
