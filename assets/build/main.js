@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkBlog"] = self["webpackChunkBlog"] || []).push([["main"],{
+(self["webpackChunkAkaLientesS"] = self["webpackChunkAkaLientesS"] || []).push([["main"],{
 
 /***/ "./src/scripts/Application.js":
 /*!************************************!*\

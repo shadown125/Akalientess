@@ -164,7 +164,7 @@
 /******/ 			return __webpack_require__.O(result);
 /******/ 		}
 /******/ 		
-/******/ 		var chunkLoadingGlobal = self["webpackChunkBlog"] = self["webpackChunkBlog"] || [];
+/******/ 		var chunkLoadingGlobal = self["webpackChunkAkaLientesS"] = self["webpackChunkAkaLientesS"] || [];
 /******/ 		chunkLoadingGlobal.forEach(webpackJsonpCallback.bind(null, 0));
 /******/ 		chunkLoadingGlobal.push = webpackJsonpCallback.bind(null, chunkLoadingGlobal.push.bind(chunkLoadingGlobal));
 /******/ 	}();
