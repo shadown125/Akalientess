@@ -445,6 +445,16 @@ select {
 html {
   scroll-behavior: smooth;
 }
+html::-webkit-scrollbar {
+  width: 0.75rem;
+}
+html::-webkit-scrollbar-thumb {
+  background-color: var(--grey-light);
+  border-radius: 0.875rem;
+}
+html::-webkit-scrollbar-thumb:hover {
+  background-color: #667EEA;
+}
 
 body {
   overflow-y: scroll;
