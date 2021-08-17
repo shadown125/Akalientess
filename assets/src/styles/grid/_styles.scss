@@ -1,7 +1,24 @@
 @use '../susanoo-functions' as susanoo;
+@use 'variables';
 
 html {
     scroll-behavior: smooth;
+    &::-webkit-scrollbar {
+        width: susanoo.rem-calc(12);
+    }
+    &::-webkit-scrollbar-thumb {
+        background: {
+            color: var(--grey-light);
+        }
+        border: {
+            radius: susanoo.rem-calc(14);
+        }
+        &:hover {
+            background: {
+                color: variables.$scrollbar-hover-color;
+            }
+        }
+    }
 }
 
 body {
