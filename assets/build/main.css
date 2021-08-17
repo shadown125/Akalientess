@@ -1288,7 +1288,48 @@ textarea:focus-visible {
   opacity: 1;
   visibility: visible;
 }
+.staging .start-link {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  opacity: 0;
+  transform: translateX(-50%);
+  animation: bouncing 3s ease-in-out infinite 1s;
+  transition: opacity 1s linear 1s;
+}
+.staging .start-link.is-revealed {
+  opacity: 1;
+}
+.staging .start-link a:hover::before {
+  color: #ff6767;
+}
+.staging .start-link a::before {
+  content: "";
+  font-family: "icomoon";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  speak: never;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 2.875rem;
+  color: #667EEA;
+  transition: color 0.2s linear;
+}
 
+@keyframes bouncing {
+  0% {
+    bottom: 5%;
+  }
+  50% {
+    bottom: 8%;
+  }
+  100% {
+    bottom: 5%;
+  }
+}
 .projects .description {
   display: none;
   font-size: 1rem;
