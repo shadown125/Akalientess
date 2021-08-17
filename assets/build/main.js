@@ -74,7 +74,8 @@ function _initNavigationEvents2() {
 function _initOverlaysAnimations2() {
   var rareOverlays = document.querySelectorAll('[data-overlay]');
   var secondOverlays = document.querySelectorAll('[data-second-overlay]');
-  new _classes_OverlaysAnimations__WEBPACK_IMPORTED_MODULE_6__.OverlaysAnimations(rareOverlays, secondOverlays);
+  var loadingMask = document.querySelector('[data-loading-mask]');
+  new _classes_OverlaysAnimations__WEBPACK_IMPORTED_MODULE_6__.OverlaysAnimations(rareOverlays, secondOverlays, loadingMask);
 }
 
 function _initParticle2() {
@@ -309,14 +310,20 @@ var _rareOverlays = /*#__PURE__*/new WeakMap();
 
 var _secondOverlays = /*#__PURE__*/new WeakMap();
 
+var _loadingMask = /*#__PURE__*/new WeakMap();
+
 var _addOverlayClass = /*#__PURE__*/new WeakSet();
 
 var _addSecondOverlayClass = /*#__PURE__*/new WeakSet();
 
-var OverlaysAnimations = function OverlaysAnimations(rareOverlays, secondOverlays) {
+var _removeLoadingMask = /*#__PURE__*/new WeakSet();
+
+var OverlaysAnimations = function OverlaysAnimations(rareOverlays, secondOverlays, loadingMask) {
   var _this = this;
 
   _classCallCheck(this, OverlaysAnimations);
+
+  _removeLoadingMask.add(this);
 
   _addSecondOverlayClass.add(this);
 
@@ -332,9 +339,16 @@ var OverlaysAnimations = function OverlaysAnimations(rareOverlays, secondOverlay
     value: void 0
   });
 
+  _loadingMask.set(this, {
+    writable: true,
+    value: void 0
+  });
+
   _classPrivateFieldSet(this, _rareOverlays, rareOverlays);
 
   _classPrivateFieldSet(this, _secondOverlays, secondOverlays);
+
+  _classPrivateFieldSet(this, _loadingMask, loadingMask);
 
   _classPrivateFieldGet(this, _secondOverlays).forEach(function (item) {
     _classPrivateMethodGet(_this, _addSecondOverlayClass, _addSecondOverlayClass2).call(_this, item);
@@ -343,6 +357,8 @@ var OverlaysAnimations = function OverlaysAnimations(rareOverlays, secondOverlay
   _classPrivateFieldGet(this, _rareOverlays).forEach(function (item) {
     _classPrivateMethodGet(_this, _addOverlayClass, _addOverlayClass2).call(_this, item);
   });
+
+  window.addEventListener('DOMContentLoaded', _classPrivateMethodGet(this, _removeLoadingMask, _removeLoadingMask2).bind(this));
 };
 
 function _addOverlayClass2(item) {
@@ -385,6 +401,10 @@ function _addSecondOverlayClass2(item) {
     threshold: 0.25
   });
   observer.observe(item);
+}
+
+function _removeLoadingMask2() {
+  _classPrivateFieldGet(this, _loadingMask).classList.add('is-loaded');
 }
 
 /***/ }),
