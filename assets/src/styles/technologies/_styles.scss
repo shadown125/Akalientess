@@ -67,14 +67,14 @@
     .technology {
         margin: {
             top: auto;
-            bottom: susanoo.rem-calc(-56);
+            bottom: susanoo.rem-calc(156);
         }
         opacity: 0;
         transition: opacity .35s linear, margin-bottom .35s linear;
         &.mask-revealed {
             opacity: 1;
             margin: {
-                bottom: susanoo.rem-calc(56);
+                bottom: susanoo.rem-calc(256);
             }
         }
     }
