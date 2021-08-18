@@ -1,5 +1,5 @@
 ---
-title: Competetive Player
+title: Competitive Player
 imageName: akali
 ---
 
