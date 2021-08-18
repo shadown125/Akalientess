@@ -169,10 +169,12 @@
         border: unset;
         cursor: pointer;
     }
+    .logo {
+        width: susanoo.rem-calc(74);
+        height: susanoo.rem-calc(86);
+    }
     img {
         color: var(--color-on-primary);
         padding: susanoo.rem-calc(6) 0;
-        height: susanoo.rem-calc(74);
-        width: susanoo.rem-calc(74);
     }
 }
