@@ -46,23 +46,18 @@
     "postcss": "^8.3.6",
     "postcss-cli": "^8.3.1",
     "postcss-csso": "^5.0.0",
-    "sass": "^1.37.5",
+    "sass": "^1.38.0",
     "stylelint": "^13.13.1",
-    "svgo": "^2.3.1",
+    "svgo": "^2.4.0",
     "terser-webpack-plugin": "^5.1.4",
     "webpack": "^5.50.0",
     "webpack-bundle-analyzer": "^4.4.2",
-    "webpack-cli": "^4.7.2"
+    "webpack-cli": "^4.8.0"
   },
   "dependencies": {
-    "core-js": "^3.16.1",
-    "countup.js": "^2.0.8",
-    "cssnano": "^5.0.7",
-    "foundation-sites": "^6.6.3",
+    "core-js": "^3.16.2",
+    "cssnano": "^5.0.8",
     "jquery": "^3.6.0",
-    "jquery-circle-progress": "^1.2.2",
-    "regenerator-runtime": "^0.13.9",
-    "swiper": "^6.8.1",
-    "what-input": "^5.2.10"
+    "regenerator-runtime": "^0.13.9"
   }
 }
