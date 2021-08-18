@@ -1,6 +1,6 @@
 ---
 title: Competetive Player
-
+imageName: akali
 ---
 
 I started to play games as a kid. 
