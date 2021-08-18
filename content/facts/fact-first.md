@@ -3,6 +3,5 @@ title: Competetive Player
 imageName: akali
 ---
 
-I started to play games as a kid. 
-Then I discovered League of Legends and other Competitive games that pushed me to will of becoming the best.
-After several years I was become one of the world's best Akali players.
+I started to play video games as a kid. I played many titles over the years but the one that completely dragged me in was League of Legends. This game was something that got me into competitive gaming and made me want to become the best. And I did. In my prime, I was the best Akali player in the world and in the top 100 Challenger
+(the highest rank in-game with 200 best players in).
