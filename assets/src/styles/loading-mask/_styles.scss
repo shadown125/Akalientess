@@ -16,7 +16,7 @@
     }
     transition: all .5s ease-in-out;
     &.is-loaded {
-        right: -104%;
+        transform: translateX(100%);
     }
     .loader {
         width: 40vw;
