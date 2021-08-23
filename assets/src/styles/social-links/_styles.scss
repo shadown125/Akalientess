@@ -13,7 +13,10 @@
         left: auto;
     }
     span {
-        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
     }
     li {
         margin: {
@@ -22,6 +25,7 @@
     }
     a {
         text-decoration: none;
+        position: relative;
         &::before {
             @include susanoo.icon(null, false);
             color: variables.$icon-color;

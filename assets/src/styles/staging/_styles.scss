@@ -57,6 +57,13 @@
             opacity: 1;
         }
         a {
+            position: relative;
+            span {
+                position: absolute;
+                top: 0;
+                left: 0;
+                opacity: 0;
+            }
             &:hover {
                 &::before {
                     color: #ff6767;
