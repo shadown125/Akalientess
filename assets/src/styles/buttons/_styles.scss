@@ -264,3 +264,48 @@
         transition: all .4s cubic-bezier(.694,.048,.335,1);
     }
 }
+
+.button-learn-more {
+    display: flex;
+    position: relative;
+    padding: susanoo.rem-calc(10) susanoo.rem-calc(30);
+    border: {
+        style: none;
+        radius: 4px;
+    }
+    font: {
+        size: susanoo.rem-calc(22);
+    }
+    background: {
+        image: linear-gradient(270deg, #f06449, #ef3636);
+    }
+    color: white;
+    cursor: pointer;
+    margin: {
+        right: auto;
+        left: auto;
+    }
+    overflow: hidden;
+    transition: 0.2s transform 0.4s linear;
+    span {
+        z-index: 1;
+    }
+    &:hover {
+        transform: scale(1.05);
+        &::before {
+            left: 100%;
+        }
+    }
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -30%;
+        height: 100%;
+        width: 30%;
+        background: {
+            image: linear-gradient(270deg, #235aa6, #101b3b);
+        }
+        transition: 0.4s left cubic-bezier(1,.02,.75,.77);
+    }
+}
