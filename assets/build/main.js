@@ -1,1 +1,729 @@
-"use strict";(self.webpackChunkAkaLientesS=self.webpackChunkAkaLientesS||[]).push([[179],{5487:function(t,e,i){i(6992),i(1539),i(8783),i(8478),i(3948),i(4747),i(4129);function n(t,e,i){if(!e.has(t))throw new TypeError("attempted to get private field on non-instance");return i}function s(t,e){return function(t,e){if(e.get)return e.get.call(t);return e.value}(t,o(t,e,"get"))}function a(t,e,i){return function(t,e,i){if(e.set)e.set.call(t,i);else{if(!e.writable)throw new TypeError("attempted to set read only private field");e.value=i}}(t,o(t,e,"set"),i),i}function o(t,e,i){if(!e.has(t))throw new TypeError("attempted to "+i+" private field on non-instance");return e.get(t)}var r=new WeakMap,h=new WeakMap,c=new WeakMap,d=new WeakMap,l=new WeakMap,u=new WeakMap,f=new WeakMap,v=new WeakSet,w=new WeakSet,m=function t(e,i,o,m,g,k,b){var L=this;!function(t,e){if(!(t instanceof e))throw new TypeError("Cannot call a class as a function")}(this,t),w.add(this),v.add(this),r.set(this,{writable:!0,value:void 0}),h.set(this,{writable:!0,value:void 0}),c.set(this,{writable:!0,value:void 0}),d.set(this,{writable:!0,value:void 0}),l.set(this,{writable:!0,value:void 0}),u.set(this,{writable:!0,value:void 0}),f.set(this,{writable:!0,value:void 0}),a(this,r,e),a(this,h,i),a(this,c,o),a(this,d,m),a(this,l,g),a(this,u,k),a(this,f,b),s(this,u).forEach((function(t){t.addEventListener("click",n(L,w,p).bind(L))})),s(this,l).forEach((function(t){t.addEventListener("click",n(L,v,y).bind(L))})),s(this,r).addEventListener("click",n(this,v,y).bind(this)),s(this,h).addEventListener("click",n(this,v,y).bind(this))};function y(){if(s(this,r).classList.contains("is-active"))return s(this,r).classList.remove("is-active"),s(this,c).classList.remove("is-active"),void s(this,d).classList.remove("is-active");s(this,c).classList.add("is-active"),s(this,d).classList.add("is-active"),s(this,r).classList.add("is-active")}function p(){if(s(this,f).classList.contains("is-active"))return s(this,f).classList.remove("is-active"),void s(this,u).forEach((function(t){t.classList.remove("is-active")}));s(this,f).classList.add("is-active"),s(this,u).forEach((function(t){t.classList.add("is-active")}))}function g(t,e,i){if(!e.has(t))throw new TypeError("attempted to get private field on non-instance");return i}function k(t,e){return function(t,e){if(e.get)return e.get.call(t);return e.value}(t,L(t,e,"get"))}function b(t,e,i){return function(t,e,i){if(e.set)e.set.call(t,i);else{if(!e.writable)throw new TypeError("attempted to set read only private field");e.value=i}}(t,L(t,e,"set"),i),i}function L(t,e,i){if(!e.has(t))throw new TypeError("attempted to "+i+" private field on non-instance");return e.get(t)}var E=new WeakMap,x=new WeakMap,W=new WeakMap,S=new WeakSet,M=new WeakSet,T=new WeakSet,q=function t(e,i,n){var s=this;!function(t,e){if(!(t instanceof e))throw new TypeError("Cannot call a class as a function")}(this,t),T.add(this),M.add(this),S.add(this),E.set(this,{writable:!0,value:void 0}),x.set(this,{writable:!0,value:void 0}),W.set(this,{writable:!0,value:void 0}),b(this,E,e),b(this,x,i),b(this,W,n),k(this,x).forEach((function(t){g(s,M,z).call(s,t)})),k(this,E).forEach((function(t){g(s,S,C).call(s,t)})),window.addEventListener("DOMContentLoaded",g(this,T,A).bind(this))};function C(t){new IntersectionObserver((function(t){0!==t[0].intersectionRatio&&t.forEach((function(t){t.target.classList.contains("link-project")?(t.target.classList.add("overlay-project"),t.target.classList.add("is-revealed")):t.target.classList.contains("mask")||t.target.classList.contains("mask-about-me")?setTimeout((function(){t.target.classList.add("mask-revealed")}),750):(t.target.classList.add("overlay"),setTimeout((function(){t.target.classList.add("is-revealed")}),1450))}))}),{threshold:.25}).observe(t)}function z(t){new IntersectionObserver((function(t){0!==t[0].intersectionRatio&&t.forEach((function(t){t.target.classList.add("is-revealed")}))}),{threshold:.25}).observe(t)}function A(){k(this,W).classList.add("is-loaded")}i(3290);function O(t,e){for(var i=0;i<e.length;i++){var n=e[i];n.enumerable=n.enumerable||!1,n.configurable=!0,"value"in n&&(n.writable=!0),Object.defineProperty(t,n.key,n)}}function H(t,e,i){if(!e.has(t))throw new TypeError("attempted to get private field on non-instance");return i}var P=new WeakSet,X=new WeakSet,Y=function(){function t(e,i,n,s,a,o){!function(t,e){if(!(t instanceof e))throw new TypeError("Cannot call a class as a function")}(this,t),X.add(this),P.add(this),this.canvas=document.querySelector("[data-canvas]"),this.ctx=this.canvas.getContext("2d"),this.x=e,this.y=i,this.directionX=n,this.directionY=s,this.size=a,this.color=o,this.mouse={x:null,y:null,radius:this.canvas.height/180*(this.canvas.width/180)},window.addEventListener("mousemove",this.mouseMovement.bind(this)),window.addEventListener("mouseout",H(this,P,j).bind(this)),window.addEventListener("resize",H(this,X,I).bind(this))}var e,i,n;return e=t,(i=[{key:"mouseMovement",value:function(t){this.mouse.x=t.x,this.mouse.y=t.y}},{key:"draw",value:function(){this.ctx.beginPath(),this.ctx.arc(this.x,this.y,this.size,0,2*Math.PI,!1),this.ctx.fillStyle=this.color,this.ctx.fill()}},{key:"update",value:function(){(this.x>this.canvas.width||this.x<0)&&(this.directionX=-this.directionX),(this.y>this.canvas.height||this.y<0)&&(this.directionY=-this.directionY);var t=this.mouse.x-this.x,e=this.mouse.y-this.y;Math.sqrt(t*t+e*e)<this.mouse.radius+this.size&&(this.mouse.x<this.x&&this.x<this.canvas.width-10*this.size&&(this.x+=10),this.mouse.x>this.x&&this.x>10*this.size&&(this.x-=10),this.mouse.y<this.y&&this.y<this.canvas.height-10*this.size&&(this.y+=10),this.mouse.y>this.y&&this.y>10*this.size&&(this.y-=10)),this.x+=this.directionX,this.y+=this.directionY,this.draw()}}])&&O(e.prototype,i),n&&O(e,n),t}();function j(){this.mouse.x=void 0,this.mouse.y=void 0}function I(){this.mouse.radius=this.canvas.height/180*(this.canvas.width/180)}function R(t,e,i){if(!e.has(t))throw new TypeError("attempted to get private field on non-instance");return i}function D(t,e){return function(t,e){if(e.get)return e.get.call(t);return e.value}(t,B(t,e,"get"))}function F(t,e,i){return function(t,e,i){if(e.set)e.set.call(t,i);else{if(!e.writable)throw new TypeError("attempted to set read only private field");e.value=i}}(t,B(t,e,"set"),i),i}function B(t,e,i){if(!e.has(t))throw new TypeError("attempted to "+i+" private field on non-instance");return e.get(t)}var G=new WeakMap,J=new WeakMap,K=new WeakMap,N=new WeakSet,Q=new WeakSet,U=new WeakSet,V=new WeakSet,Z=function t(e){!function(t,e){if(!(t instanceof e))throw new TypeError("Cannot call a class as a function")}(this,t),V.add(this),U.add(this),Q.add(this),N.add(this),G.set(this,{writable:!0,value:void 0}),J.set(this,{writable:!0,value:void 0}),K.set(this,{writable:!0,value:[]}),F(this,G,e),F(this,J,e.getContext("2d")),D(this,G).width=window.innerWidth,D(this,G).height=window.innerHeight,R(this,Q,_).call(this),R(this,U,tt).call(this),window.addEventListener("resize",R(this,N,$).bind(this))};function $(){D(this,G).width=innerWidth,D(this,G).height=innerHeight}function _(){F(this,K,[]);for(var t=D(this,G).height*D(this,G).width/34e3,e=0;e<t;e++){var i=5*Math.random()+1,n=Math.random()*(innerWidth-2*i-2*i)+2*i,s=Math.random()*(innerHeight-2*i-2*i)+2*i,a=5*Math.random()-2.5,o=5*Math.random()-2.5;D(this,K).push(new Y(n,s,a,o,i,"#b0abbe"))}}function tt(){var t=this;setTimeout((function(){requestAnimationFrame(R(t,U,tt).bind(t))}),15),D(this,J).clearRect(0,0,innerWidth,innerHeight);for(var e=0;e<D(this,K).length;e++)D(this,K)[e].update();R(this,V,et).call(this)}function et(){for(var t=1,e=0;e<D(this,K).length;e++)for(var i=e;i<D(this,K).length;i++){var n=(D(this,K)[e].x-D(this,K)[i].x)*(D(this,K)[e].x-D(this,K)[i].x)+(D(this,K)[e].y-D(this,K)[i].y)*(D(this,K)[e].y-D(this,K)[i].y);n<D(this,G).width/7*(D(this,G).height/7)&&(t=1-n/2e4,D(this,J).strokeStyle="rgba(176, 171, 190,"+t+")",D(this,J).lineWidth=1,D(this,J).beginPath(),D(this,J).moveTo(D(this,K)[e].x,D(this,K)[e].y),D(this,J).lineTo(D(this,K)[i].x,D(this,K)[i].y),D(this,J).stroke())}}function it(t,e,i){if(!e.has(t))throw new TypeError("attempted to get private field on non-instance");return i}var nt=new WeakSet,st=new WeakSet,at=new WeakSet;function ot(){var t=document.querySelector("[data-button-close]"),e=document.querySelector("[data-button-menu]"),i=document.querySelector("[data-navigation-container]"),n=document.querySelector("[data-mobile-container-animation]"),s=document.querySelectorAll("[data-nav-link]"),a=document.querySelectorAll("[data-nav-contact]"),o=document.querySelector("[data-contact-section]");new m(t,e,i,n,s,a,o)}function rt(){var t=document.querySelectorAll("[data-overlay]"),e=document.querySelectorAll("[data-second-overlay]"),i=document.querySelector("[data-loading-mask]");new q(t,e,i)}function ht(){var t=document.querySelector("[data-canvas]");new Z(t)}new function t(){!function(t,e){if(!(t instanceof e))throw new TypeError("Cannot call a class as a function")}(this,t),at.add(this),st.add(this),nt.add(this),it(this,nt,ot).call(this),it(this,st,rt).call(this),it(this,at,ht).call(this)}}},function(t){t.O(0,[736],(function(){return e=5487,t(t.s=e);var e}));t.O()}]);
+"use strict";
+(self["webpackChunkAkaLientesS"] = self["webpackChunkAkaLientesS"] || []).push([["main"],{
+
+/***/ "./src/scripts/Application.js":
+/*!************************************!*\
+  !*** ./src/scripts/Application.js ***!
+  \************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": function() { return /* binding */ Application; }
+/* harmony export */ });
+/* harmony import */ var core_js_modules_es_array_iterator_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.iterator.js */ "./node_modules/core-js/modules/es.array.iterator.js");
+/* harmony import */ var core_js_modules_es_array_iterator_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_iterator_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.object.to-string.js */ "./node_modules/core-js/modules/es.object.to-string.js");
+/* harmony import */ var core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var core_js_modules_es_string_iterator_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es.string.iterator.js */ "./node_modules/core-js/modules/es.string.iterator.js");
+/* harmony import */ var core_js_modules_es_string_iterator_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_iterator_js__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var core_js_modules_es_weak_set_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/es.weak-set.js */ "./node_modules/core-js/modules/es.weak-set.js");
+/* harmony import */ var core_js_modules_es_weak_set_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_weak_set_js__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var core_js_modules_web_dom_collections_iterator_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator.js */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
+/* harmony import */ var core_js_modules_web_dom_collections_iterator_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator_js__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _classes_NavigationEvents__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./classes/NavigationEvents */ "./src/scripts/classes/NavigationEvents.js");
+/* harmony import */ var _classes_OverlaysAnimations__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./classes/OverlaysAnimations */ "./src/scripts/classes/OverlaysAnimations.js");
+/* harmony import */ var _classes_Particle__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./classes/Particle */ "./src/scripts/classes/Particle.js");
+
+
+
+
+
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _classPrivateMethodGet(receiver, privateSet, fn) { if (!privateSet.has(receiver)) { throw new TypeError("attempted to get private field on non-instance"); } return fn; }
+
+
+
+
+
+var _initNavigationEvents = /*#__PURE__*/new WeakSet();
+
+var _initOverlaysAnimations = /*#__PURE__*/new WeakSet();
+
+var _initParticle = /*#__PURE__*/new WeakSet();
+
+var Application = function Application() {
+  _classCallCheck(this, Application);
+
+  _initParticle.add(this);
+
+  _initOverlaysAnimations.add(this);
+
+  _initNavigationEvents.add(this);
+
+  _classPrivateMethodGet(this, _initNavigationEvents, _initNavigationEvents2).call(this);
+
+  _classPrivateMethodGet(this, _initOverlaysAnimations, _initOverlaysAnimations2).call(this);
+
+  _classPrivateMethodGet(this, _initParticle, _initParticle2).call(this);
+};
+
+function _initNavigationEvents2() {
+  var closeButton = document.querySelector('[data-button-close]');
+  var menuButton = document.querySelector('[data-button-menu]');
+  var navigationContainer = document.querySelector('[data-navigation-container]');
+  var mobileContainerAnimation = document.querySelector('[data-mobile-container-animation]');
+  var navLinks = document.querySelectorAll('[data-nav-link]');
+  var navContactButton = document.querySelectorAll('[data-nav-contact]');
+  var contactSection = document.querySelector('[data-contact-section]');
+  new _classes_NavigationEvents__WEBPACK_IMPORTED_MODULE_5__.NavigationEvents(closeButton, menuButton, navigationContainer, mobileContainerAnimation, navLinks, navContactButton, contactSection);
+}
+
+function _initOverlaysAnimations2() {
+  var rareOverlays = document.querySelectorAll('[data-overlay]');
+  var secondOverlays = document.querySelectorAll('[data-second-overlay]');
+  var loadingMask = document.querySelector('[data-loading-mask]');
+  new _classes_OverlaysAnimations__WEBPACK_IMPORTED_MODULE_6__.OverlaysAnimations(rareOverlays, secondOverlays, loadingMask);
+}
+
+function _initParticle2() {
+  var canvas = document.querySelector('[data-canvas]');
+  new _classes_Particle__WEBPACK_IMPORTED_MODULE_7__.Particle(canvas);
+}
+
+
+
+/***/ }),
+
+/***/ "./src/scripts/classes/NavigationEvents.js":
+/*!*************************************************!*\
+  !*** ./src/scripts/classes/NavigationEvents.js ***!
+  \*************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "NavigationEvents": function() { return /* binding */ NavigationEvents; }
+/* harmony export */ });
+/* harmony import */ var core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each.js */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
+/* harmony import */ var core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_es_array_iterator_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.array.iterator.js */ "./node_modules/core-js/modules/es.array.iterator.js");
+/* harmony import */ var core_js_modules_es_array_iterator_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_iterator_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es.object.to-string.js */ "./node_modules/core-js/modules/es.object.to-string.js");
+/* harmony import */ var core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var core_js_modules_es_string_iterator_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/es.string.iterator.js */ "./node_modules/core-js/modules/es.string.iterator.js");
+/* harmony import */ var core_js_modules_es_string_iterator_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_iterator_js__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var core_js_modules_es_weak_map_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! core-js/modules/es.weak-map.js */ "./node_modules/core-js/modules/es.weak-map.js");
+/* harmony import */ var core_js_modules_es_weak_map_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_weak_map_js__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var core_js_modules_web_dom_collections_iterator_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator.js */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
+/* harmony import */ var core_js_modules_web_dom_collections_iterator_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator_js__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var core_js_modules_es_weak_set_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! core-js/modules/es.weak-set.js */ "./node_modules/core-js/modules/es.weak-set.js");
+/* harmony import */ var core_js_modules_es_weak_set_js__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_weak_set_js__WEBPACK_IMPORTED_MODULE_6__);
+
+
+
+
+
+
+
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _classPrivateMethodGet(receiver, privateSet, fn) { if (!privateSet.has(receiver)) { throw new TypeError("attempted to get private field on non-instance"); } return fn; }
+
+function _classPrivateFieldGet(receiver, privateMap) { var descriptor = _classExtractFieldDescriptor(receiver, privateMap, "get"); return _classApplyDescriptorGet(receiver, descriptor); }
+
+function _classApplyDescriptorGet(receiver, descriptor) { if (descriptor.get) { return descriptor.get.call(receiver); } return descriptor.value; }
+
+function _classPrivateFieldSet(receiver, privateMap, value) { var descriptor = _classExtractFieldDescriptor(receiver, privateMap, "set"); _classApplyDescriptorSet(receiver, descriptor, value); return value; }
+
+function _classExtractFieldDescriptor(receiver, privateMap, action) { if (!privateMap.has(receiver)) { throw new TypeError("attempted to " + action + " private field on non-instance"); } return privateMap.get(receiver); }
+
+function _classApplyDescriptorSet(receiver, descriptor, value) { if (descriptor.set) { descriptor.set.call(receiver, value); } else { if (!descriptor.writable) { throw new TypeError("attempted to set read only private field"); } descriptor.value = value; } }
+
+var _closeButton = /*#__PURE__*/new WeakMap();
+
+var _menuButton = /*#__PURE__*/new WeakMap();
+
+var _navigationContainer = /*#__PURE__*/new WeakMap();
+
+var _mobileContainerAnimation = /*#__PURE__*/new WeakMap();
+
+var _navLinks = /*#__PURE__*/new WeakMap();
+
+var _contactButton = /*#__PURE__*/new WeakMap();
+
+var _contactSection = /*#__PURE__*/new WeakMap();
+
+var _addRemoveClass = /*#__PURE__*/new WeakSet();
+
+var _contactEvent = /*#__PURE__*/new WeakSet();
+
+var NavigationEvents = function NavigationEvents(closeButton, menuButton, navigationContainer, mobileContainerAnimation, navLinks, contactButton, contactSection) {
+  var _this = this;
+
+  _classCallCheck(this, NavigationEvents);
+
+  _contactEvent.add(this);
+
+  _addRemoveClass.add(this);
+
+  _closeButton.set(this, {
+    writable: true,
+    value: void 0
+  });
+
+  _menuButton.set(this, {
+    writable: true,
+    value: void 0
+  });
+
+  _navigationContainer.set(this, {
+    writable: true,
+    value: void 0
+  });
+
+  _mobileContainerAnimation.set(this, {
+    writable: true,
+    value: void 0
+  });
+
+  _navLinks.set(this, {
+    writable: true,
+    value: void 0
+  });
+
+  _contactButton.set(this, {
+    writable: true,
+    value: void 0
+  });
+
+  _contactSection.set(this, {
+    writable: true,
+    value: void 0
+  });
+
+  _classPrivateFieldSet(this, _closeButton, closeButton);
+
+  _classPrivateFieldSet(this, _menuButton, menuButton);
+
+  _classPrivateFieldSet(this, _navigationContainer, navigationContainer);
+
+  _classPrivateFieldSet(this, _mobileContainerAnimation, mobileContainerAnimation);
+
+  _classPrivateFieldSet(this, _navLinks, navLinks);
+
+  _classPrivateFieldSet(this, _contactButton, contactButton);
+
+  _classPrivateFieldSet(this, _contactSection, contactSection);
+
+  _classPrivateFieldGet(this, _contactButton).forEach(function (item) {
+    item.addEventListener('click', _classPrivateMethodGet(_this, _contactEvent, _contactEvent2).bind(_this));
+  });
+
+  _classPrivateFieldGet(this, _navLinks).forEach(function (item) {
+    item.addEventListener('click', _classPrivateMethodGet(_this, _addRemoveClass, _addRemoveClass2).bind(_this));
+  });
+
+  _classPrivateFieldGet(this, _closeButton).addEventListener('click', _classPrivateMethodGet(this, _addRemoveClass, _addRemoveClass2).bind(this));
+
+  _classPrivateFieldGet(this, _menuButton).addEventListener('click', _classPrivateMethodGet(this, _addRemoveClass, _addRemoveClass2).bind(this));
+};
+
+function _addRemoveClass2() {
+  if (_classPrivateFieldGet(this, _closeButton).classList.contains('is-active')) {
+    _classPrivateFieldGet(this, _closeButton).classList.remove('is-active');
+
+    _classPrivateFieldGet(this, _navigationContainer).classList.remove('is-active');
+
+    _classPrivateFieldGet(this, _mobileContainerAnimation).classList.remove('is-active');
+
+    return;
+  }
+
+  _classPrivateFieldGet(this, _navigationContainer).classList.add('is-active');
+
+  _classPrivateFieldGet(this, _mobileContainerAnimation).classList.add('is-active');
+
+  _classPrivateFieldGet(this, _closeButton).classList.add('is-active');
+}
+
+function _contactEvent2() {
+  if (_classPrivateFieldGet(this, _contactSection).classList.contains('is-active')) {
+    _classPrivateFieldGet(this, _contactSection).classList.remove('is-active');
+
+    _classPrivateFieldGet(this, _contactButton).forEach(function (item) {
+      item.classList.remove('is-active');
+    });
+
+    return;
+  }
+
+  _classPrivateFieldGet(this, _contactSection).classList.add('is-active');
+
+  _classPrivateFieldGet(this, _contactButton).forEach(function (item) {
+    item.classList.add('is-active');
+  });
+}
+
+/***/ }),
+
+/***/ "./src/scripts/classes/OverlaysAnimations.js":
+/*!***************************************************!*\
+  !*** ./src/scripts/classes/OverlaysAnimations.js ***!
+  \***************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "OverlaysAnimations": function() { return /* binding */ OverlaysAnimations; }
+/* harmony export */ });
+/* harmony import */ var core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each.js */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
+/* harmony import */ var core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_es_array_iterator_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.array.iterator.js */ "./node_modules/core-js/modules/es.array.iterator.js");
+/* harmony import */ var core_js_modules_es_array_iterator_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_iterator_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es.object.to-string.js */ "./node_modules/core-js/modules/es.object.to-string.js");
+/* harmony import */ var core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var core_js_modules_es_string_iterator_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/es.string.iterator.js */ "./node_modules/core-js/modules/es.string.iterator.js");
+/* harmony import */ var core_js_modules_es_string_iterator_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_iterator_js__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var core_js_modules_es_weak_map_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! core-js/modules/es.weak-map.js */ "./node_modules/core-js/modules/es.weak-map.js");
+/* harmony import */ var core_js_modules_es_weak_map_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_weak_map_js__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var core_js_modules_web_dom_collections_iterator_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator.js */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
+/* harmony import */ var core_js_modules_web_dom_collections_iterator_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator_js__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var core_js_modules_es_weak_set_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! core-js/modules/es.weak-set.js */ "./node_modules/core-js/modules/es.weak-set.js");
+/* harmony import */ var core_js_modules_es_weak_set_js__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_weak_set_js__WEBPACK_IMPORTED_MODULE_6__);
+
+
+
+
+
+
+
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _classPrivateMethodGet(receiver, privateSet, fn) { if (!privateSet.has(receiver)) { throw new TypeError("attempted to get private field on non-instance"); } return fn; }
+
+function _classPrivateFieldGet(receiver, privateMap) { var descriptor = _classExtractFieldDescriptor(receiver, privateMap, "get"); return _classApplyDescriptorGet(receiver, descriptor); }
+
+function _classApplyDescriptorGet(receiver, descriptor) { if (descriptor.get) { return descriptor.get.call(receiver); } return descriptor.value; }
+
+function _classPrivateFieldSet(receiver, privateMap, value) { var descriptor = _classExtractFieldDescriptor(receiver, privateMap, "set"); _classApplyDescriptorSet(receiver, descriptor, value); return value; }
+
+function _classExtractFieldDescriptor(receiver, privateMap, action) { if (!privateMap.has(receiver)) { throw new TypeError("attempted to " + action + " private field on non-instance"); } return privateMap.get(receiver); }
+
+function _classApplyDescriptorSet(receiver, descriptor, value) { if (descriptor.set) { descriptor.set.call(receiver, value); } else { if (!descriptor.writable) { throw new TypeError("attempted to set read only private field"); } descriptor.value = value; } }
+
+var _rareOverlays = /*#__PURE__*/new WeakMap();
+
+var _secondOverlays = /*#__PURE__*/new WeakMap();
+
+var _loadingMask = /*#__PURE__*/new WeakMap();
+
+var _addOverlayClass = /*#__PURE__*/new WeakSet();
+
+var _addSecondOverlayClass = /*#__PURE__*/new WeakSet();
+
+var _removeLoadingMask = /*#__PURE__*/new WeakSet();
+
+var OverlaysAnimations = function OverlaysAnimations(rareOverlays, secondOverlays, loadingMask) {
+  var _this = this;
+
+  _classCallCheck(this, OverlaysAnimations);
+
+  _removeLoadingMask.add(this);
+
+  _addSecondOverlayClass.add(this);
+
+  _addOverlayClass.add(this);
+
+  _rareOverlays.set(this, {
+    writable: true,
+    value: void 0
+  });
+
+  _secondOverlays.set(this, {
+    writable: true,
+    value: void 0
+  });
+
+  _loadingMask.set(this, {
+    writable: true,
+    value: void 0
+  });
+
+  _classPrivateFieldSet(this, _rareOverlays, rareOverlays);
+
+  _classPrivateFieldSet(this, _secondOverlays, secondOverlays);
+
+  _classPrivateFieldSet(this, _loadingMask, loadingMask);
+
+  _classPrivateFieldGet(this, _secondOverlays).forEach(function (item) {
+    _classPrivateMethodGet(_this, _addSecondOverlayClass, _addSecondOverlayClass2).call(_this, item);
+  });
+
+  _classPrivateFieldGet(this, _rareOverlays).forEach(function (item) {
+    _classPrivateMethodGet(_this, _addOverlayClass, _addOverlayClass2).call(_this, item);
+  });
+
+  window.addEventListener('DOMContentLoaded', _classPrivateMethodGet(this, _removeLoadingMask, _removeLoadingMask2).bind(this));
+};
+
+function _addOverlayClass2(item) {
+  var onIntersection = function onIntersection(entries) {
+    if (entries[0]['intersectionRatio'] !== 0) {
+      entries.forEach(function (entry) {
+        if (entry.target.classList.contains('link-project')) {
+          entry.target.classList.add('overlay-project');
+          entry.target.classList.add('is-revealed');
+        } else if (entry.target.classList.contains('mask') || entry.target.classList.contains('mask-about-me')) {
+          setTimeout(function () {
+            entry.target.classList.add('mask-revealed');
+          }, 750);
+        } else {
+          entry.target.classList.add('overlay');
+          setTimeout(function () {
+            entry.target.classList.add('is-revealed');
+          }, 1450);
+        }
+      });
+    }
+  };
+
+  var observer = new IntersectionObserver(onIntersection, {
+    threshold: 0.25
+  });
+  observer.observe(item);
+}
+
+function _addSecondOverlayClass2(item) {
+  var onIntersection = function onIntersection(entries) {
+    if (entries[0]['intersectionRatio'] !== 0) {
+      entries.forEach(function (entry) {
+        entry.target.classList.add('is-revealed');
+      });
+    }
+  };
+
+  var observer = new IntersectionObserver(onIntersection, {
+    threshold: 0.25
+  });
+  observer.observe(item);
+}
+
+function _removeLoadingMask2() {
+  _classPrivateFieldGet(this, _loadingMask).classList.add('is-loaded');
+}
+
+/***/ }),
+
+/***/ "./src/scripts/classes/Particle.js":
+/*!*****************************************!*\
+  !*** ./src/scripts/classes/Particle.js ***!
+  \*****************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Particle": function() { return /* binding */ Particle; }
+/* harmony export */ });
+/* harmony import */ var core_js_modules_es_array_iterator_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.iterator.js */ "./node_modules/core-js/modules/es.array.iterator.js");
+/* harmony import */ var core_js_modules_es_array_iterator_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_iterator_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.object.to-string.js */ "./node_modules/core-js/modules/es.object.to-string.js");
+/* harmony import */ var core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var core_js_modules_es_string_iterator_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es.string.iterator.js */ "./node_modules/core-js/modules/es.string.iterator.js");
+/* harmony import */ var core_js_modules_es_string_iterator_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_iterator_js__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var core_js_modules_es_weak_map_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/es.weak-map.js */ "./node_modules/core-js/modules/es.weak-map.js");
+/* harmony import */ var core_js_modules_es_weak_map_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_weak_map_js__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var core_js_modules_web_dom_collections_iterator_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator.js */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
+/* harmony import */ var core_js_modules_web_dom_collections_iterator_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator_js__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var core_js_modules_es_weak_set_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! core-js/modules/es.weak-set.js */ "./node_modules/core-js/modules/es.weak-set.js");
+/* harmony import */ var core_js_modules_es_weak_set_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_weak_set_js__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _ParticleFunctionality__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./ParticleFunctionality */ "./src/scripts/classes/ParticleFunctionality.js");
+
+
+
+
+
+
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _classPrivateMethodGet(receiver, privateSet, fn) { if (!privateSet.has(receiver)) { throw new TypeError("attempted to get private field on non-instance"); } return fn; }
+
+function _classPrivateFieldGet(receiver, privateMap) { var descriptor = _classExtractFieldDescriptor(receiver, privateMap, "get"); return _classApplyDescriptorGet(receiver, descriptor); }
+
+function _classApplyDescriptorGet(receiver, descriptor) { if (descriptor.get) { return descriptor.get.call(receiver); } return descriptor.value; }
+
+function _classPrivateFieldSet(receiver, privateMap, value) { var descriptor = _classExtractFieldDescriptor(receiver, privateMap, "set"); _classApplyDescriptorSet(receiver, descriptor, value); return value; }
+
+function _classExtractFieldDescriptor(receiver, privateMap, action) { if (!privateMap.has(receiver)) { throw new TypeError("attempted to " + action + " private field on non-instance"); } return privateMap.get(receiver); }
+
+function _classApplyDescriptorSet(receiver, descriptor, value) { if (descriptor.set) { descriptor.set.call(receiver, value); } else { if (!descriptor.writable) { throw new TypeError("attempted to set read only private field"); } descriptor.value = value; } }
+
+
+
+var _canvas = /*#__PURE__*/new WeakMap();
+
+var _ctx = /*#__PURE__*/new WeakMap();
+
+var _particlesArray = /*#__PURE__*/new WeakMap();
+
+var _reset = /*#__PURE__*/new WeakSet();
+
+var _init = /*#__PURE__*/new WeakSet();
+
+var _animate = /*#__PURE__*/new WeakSet();
+
+var _connect = /*#__PURE__*/new WeakSet();
+
+var Particle = function Particle(canvas) {
+  _classCallCheck(this, Particle);
+
+  _connect.add(this);
+
+  _animate.add(this);
+
+  _init.add(this);
+
+  _reset.add(this);
+
+  _canvas.set(this, {
+    writable: true,
+    value: void 0
+  });
+
+  _ctx.set(this, {
+    writable: true,
+    value: void 0
+  });
+
+  _particlesArray.set(this, {
+    writable: true,
+    value: []
+  });
+
+  _classPrivateFieldSet(this, _canvas, canvas);
+
+  _classPrivateFieldSet(this, _ctx, canvas.getContext('2d'));
+
+  _classPrivateFieldGet(this, _canvas).width = window.innerWidth;
+  _classPrivateFieldGet(this, _canvas).height = window.innerHeight;
+
+  _classPrivateMethodGet(this, _init, _init2).call(this);
+
+  _classPrivateMethodGet(this, _animate, _animate2).call(this);
+
+  window.addEventListener('resize', _classPrivateMethodGet(this, _reset, _reset2).bind(this));
+};
+
+function _reset2() {
+  _classPrivateFieldGet(this, _canvas).width = innerWidth;
+  _classPrivateFieldGet(this, _canvas).height = innerHeight;
+}
+
+function _init2() {
+  _classPrivateFieldSet(this, _particlesArray, []);
+
+  var numberOfParticles = _classPrivateFieldGet(this, _canvas).height * _classPrivateFieldGet(this, _canvas).width / 34000;
+
+  for (var i = 0; i < numberOfParticles; i++) {
+    var size = Math.random() * 5 + 1;
+    var x = Math.random() * (innerWidth - size * 2 - size * 2) + size * 2;
+    var y = Math.random() * (innerHeight - size * 2 - size * 2) + size * 2;
+    var directionX = Math.random() * 5 - 2.5;
+    var directionY = Math.random() * 5 - 2.5;
+    var color = '#b0abbe';
+
+    _classPrivateFieldGet(this, _particlesArray).push(new _ParticleFunctionality__WEBPACK_IMPORTED_MODULE_6__.ParticleFunctionality(x, y, directionX, directionY, size, color));
+  }
+}
+
+function _animate2() {
+  var _this = this;
+
+  setTimeout(function () {
+    requestAnimationFrame(_classPrivateMethodGet(_this, _animate, _animate2).bind(_this));
+  }, 15);
+
+  _classPrivateFieldGet(this, _ctx).clearRect(0, 0, innerWidth, innerHeight);
+
+  for (var i = 0; i < _classPrivateFieldGet(this, _particlesArray).length; i++) {
+    _classPrivateFieldGet(this, _particlesArray)[i].update();
+  }
+
+  _classPrivateMethodGet(this, _connect, _connect2).call(this);
+}
+
+function _connect2() {
+  var opacity = 1;
+
+  for (var a = 0; a < _classPrivateFieldGet(this, _particlesArray).length; a++) {
+    for (var b = a; b < _classPrivateFieldGet(this, _particlesArray).length; b++) {
+      var distance = (_classPrivateFieldGet(this, _particlesArray)[a].x - _classPrivateFieldGet(this, _particlesArray)[b].x) * (_classPrivateFieldGet(this, _particlesArray)[a].x - _classPrivateFieldGet(this, _particlesArray)[b].x) + (_classPrivateFieldGet(this, _particlesArray)[a].y - _classPrivateFieldGet(this, _particlesArray)[b].y) * (_classPrivateFieldGet(this, _particlesArray)[a].y - _classPrivateFieldGet(this, _particlesArray)[b].y);
+
+      if (distance < _classPrivateFieldGet(this, _canvas).width / 7 * (_classPrivateFieldGet(this, _canvas).height / 7)) {
+        opacity = 1 - distance / 20000;
+        _classPrivateFieldGet(this, _ctx).strokeStyle = 'rgba(176, 171, 190,' + opacity + ')';
+        _classPrivateFieldGet(this, _ctx).lineWidth = 1;
+
+        _classPrivateFieldGet(this, _ctx).beginPath();
+
+        _classPrivateFieldGet(this, _ctx).moveTo(_classPrivateFieldGet(this, _particlesArray)[a].x, _classPrivateFieldGet(this, _particlesArray)[a].y);
+
+        _classPrivateFieldGet(this, _ctx).lineTo(_classPrivateFieldGet(this, _particlesArray)[b].x, _classPrivateFieldGet(this, _particlesArray)[b].y);
+
+        _classPrivateFieldGet(this, _ctx).stroke();
+      }
+    }
+  }
+}
+
+/***/ }),
+
+/***/ "./src/scripts/classes/ParticleFunctionality.js":
+/*!******************************************************!*\
+  !*** ./src/scripts/classes/ParticleFunctionality.js ***!
+  \******************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "ParticleFunctionality": function() { return /* binding */ ParticleFunctionality; }
+/* harmony export */ });
+/* harmony import */ var core_js_modules_es_array_fill_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.fill.js */ "./node_modules/core-js/modules/es.array.fill.js");
+/* harmony import */ var core_js_modules_es_array_fill_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_fill_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_es_array_iterator_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.array.iterator.js */ "./node_modules/core-js/modules/es.array.iterator.js");
+/* harmony import */ var core_js_modules_es_array_iterator_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_iterator_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es.object.to-string.js */ "./node_modules/core-js/modules/es.object.to-string.js");
+/* harmony import */ var core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var core_js_modules_es_string_iterator_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/es.string.iterator.js */ "./node_modules/core-js/modules/es.string.iterator.js");
+/* harmony import */ var core_js_modules_es_string_iterator_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_iterator_js__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var core_js_modules_es_weak_set_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! core-js/modules/es.weak-set.js */ "./node_modules/core-js/modules/es.weak-set.js");
+/* harmony import */ var core_js_modules_es_weak_set_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_weak_set_js__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var core_js_modules_web_dom_collections_iterator_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator.js */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
+/* harmony import */ var core_js_modules_web_dom_collections_iterator_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator_js__WEBPACK_IMPORTED_MODULE_5__);
+
+
+
+
+
+
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _classPrivateMethodGet(receiver, privateSet, fn) { if (!privateSet.has(receiver)) { throw new TypeError("attempted to get private field on non-instance"); } return fn; }
+
+var _resetMouseCoordinate = /*#__PURE__*/new WeakSet();
+
+var _reset = /*#__PURE__*/new WeakSet();
+
+var ParticleFunctionality = /*#__PURE__*/function () {
+  function ParticleFunctionality(x, y, directionX, directionY, size, color) {
+    _classCallCheck(this, ParticleFunctionality);
+
+    _reset.add(this);
+
+    _resetMouseCoordinate.add(this);
+
+    this.canvas = document.querySelector('[data-canvas]');
+    this.ctx = this.canvas.getContext('2d');
+    this.x = x;
+    this.y = y;
+    this.directionX = directionX;
+    this.directionY = directionY;
+    this.size = size;
+    this.color = color;
+    this.mouse = {
+      x: null,
+      y: null,
+      radius: this.canvas.height / 180 * (this.canvas.width / 180)
+    };
+    window.addEventListener('mousemove', this.mouseMovement.bind(this));
+    window.addEventListener('mouseout', _classPrivateMethodGet(this, _resetMouseCoordinate, _resetMouseCoordinate2).bind(this));
+    window.addEventListener('resize', _classPrivateMethodGet(this, _reset, _reset2).bind(this));
+  }
+
+  _createClass(ParticleFunctionality, [{
+    key: "mouseMovement",
+    value: function mouseMovement(event) {
+      this.mouse.x = event.x;
+      this.mouse.y = event.y;
+    }
+  }, {
+    key: "draw",
+    value: function draw() {
+      this.ctx.beginPath();
+      this.ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2, false);
+      this.ctx.fillStyle = this.color;
+      this.ctx.fill();
+    }
+  }, {
+    key: "update",
+    value: function update() {
+      if (this.x > this.canvas.width || this.x < 0) {
+        this.directionX = -this.directionX;
+      }
+
+      if (this.y > this.canvas.height || this.y < 0) {
+        this.directionY = -this.directionY;
+      }
+
+      var dx = this.mouse.x - this.x;
+      var dy = this.mouse.y - this.y;
+      var distance = Math.sqrt(dx * dx + dy * dy);
+
+      if (distance < this.mouse.radius + this.size) {
+        if (this.mouse.x < this.x && this.x < this.canvas.width - this.size * 10) {
+          this.x += 10;
+        }
+
+        if (this.mouse.x > this.x && this.x > this.size * 10) {
+          this.x -= 10;
+        }
+
+        if (this.mouse.y < this.y && this.y < this.canvas.height - this.size * 10) {
+          this.y += 10;
+        }
+
+        if (this.mouse.y > this.y && this.y > this.size * 10) {
+          this.y -= 10;
+        }
+      }
+
+      this.x += this.directionX;
+      this.y += this.directionY;
+      this.draw();
+    }
+  }]);
+
+  return ParticleFunctionality;
+}();
+
+function _resetMouseCoordinate2() {
+  this.mouse.x = undefined;
+  this.mouse.y = undefined;
+}
+
+function _reset2() {
+  this.mouse.radius = this.canvas.height / 180 * (this.canvas.width / 180);
+}
+
+/***/ }),
+
+/***/ "./src/scripts/main.js":
+/*!*****************************!*\
+  !*** ./src/scripts/main.js ***!
+  \*****************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Application__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Application */ "./src/scripts/Application.js");
+
+new _Application__WEBPACK_IMPORTED_MODULE_0__.default();
+
+/***/ })
+
+},
+/******/ function(__webpack_require__) { // webpackRuntimeModules
+/******/ var __webpack_exec__ = function(moduleId) { return __webpack_require__(__webpack_require__.s = moduleId); }
+/******/ __webpack_require__.O(0, ["vendor"], function() { return __webpack_exec__("./src/scripts/main.js"); });
+/******/ var __webpack_exports__ = __webpack_require__.O();
+/******/ }
+]);
