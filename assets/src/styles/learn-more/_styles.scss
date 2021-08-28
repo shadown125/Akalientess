@@ -1,0 +1,74 @@
+@use '../susanoo-functions' as susanoo;
+
+.console-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: susanoo.rem-calc(600);
+    padding: susanoo.rem-calc(30) susanoo.rem-calc(20);
+    background: {
+        color: var(--color-black-primary);
+    }
+    border: {
+        radius: susanoo.rem-calc(10);
+    }
+    z-index: 4;
+    &.hidden {
+        display:none;
+    }
+    .square {
+        display: block;
+        justify-content: center;
+        align-items: center;
+        width: susanoo.rem-calc(200);
+        height: susanoo.rem-calc(200);
+        background-color: var(--secondary);
+        padding: susanoo.rem-calc(30);
+        margin: susanoo.rem-calc(20);
+        border: {
+            style: solid;
+            width: 4px;
+            color: #07732b;
+        }
+    }
+    .answer-container {
+        .countdown {
+            border: #20242E;
+            width: 90%;
+            height: 4px;
+            background-color: #754E2E;
+        }
+        .progress-bar {
+            background-color: #E7A26D;
+            width: 100%;
+            height: 100%;
+            margin: auto;
+            transition: width 0ms linear;
+        }
+        .progress-bar-shrink{
+            width: 0;
+        }
+    }
+    .number-container {
+        display: flex;
+        justify-content: space-evenly;
+        text-align: center;
+        color: white;
+        font: {
+            size: susanoo.rem-calc(96);
+        }
+        &.hidden {
+            display:none;
+        }
+    }
+    .can-shrink{
+        transform:scale(1);
+        transition: all 1500ms linear;
+    }
+    .number-shrink{
+        transform:scale(0);
+        transition: all 1500ms linear;
+    }
+}
