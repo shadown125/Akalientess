@@ -5,10 +5,12 @@ export class PuzzleHandler {
 
     #progressBar = document.querySelector('[data-answer-progress-bar]');
     #inputElement = document.querySelector('[data-answer-input]');
-    #puzzleTime = 10;
+    #puzzleTime = 15;
     #puzzleAmount = 4;
     #numberContainer = document.querySelector('[data-number-container]');
     #answerQuestion = document.querySelector('[data-answer-question]');
+    #countdown = document.querySelector('[data-answer-countdown]');
+    #answerInputLabel = document.querySelector('[data-answer-input-label]');
 
     addDelay(seconds) {
         return new Promise(res => setTimeout(res, seconds * 1000));
@@ -19,7 +21,10 @@ export class PuzzleHandler {
     }
 
     async doPuzzle(){
+        this.#inputElement.classList.add('hidden');
+        this.#answerInputLabel.classList.add('hidden');
         this.#answerQuestion.classList.add('hidden');
+        this.#countdown.classList.add('hidden');
         this.#numberContainer.innerHTML = '';
 
         const squares = [...Array(this.#puzzleAmount).keys()].map(i => {
@@ -35,6 +40,10 @@ export class PuzzleHandler {
         await this.#displayNumbers(nums);
 
         this.#answerQuestion.classList.remove('hidden');
+        this.#progressBar.classList.remove('hidden');
+        this.#inputElement.classList.remove('hidden');
+        this.#answerInputLabel.classList.remove('hidden');
+        this.#countdown.classList.remove('hidden');
         this.#inputElement.value = '';
         this.#inputElement.focus();
 

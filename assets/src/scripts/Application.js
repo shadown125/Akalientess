@@ -50,6 +50,11 @@ export default class Application {
         const revealedSubmittedText = document.querySelector('[data-revealed-submitted-text]');
         const loadingText = document.querySelector('[data-loading-text]');
         const consoleContainer = document.querySelector('[data-console-container]');
+        const countdown = document.querySelector('[data-answer-countdown]');
+        const inputElement = document.querySelector('[data-answer-input]');
+        const answerBoxDescription = document.querySelector('[data-answer-box-description]');
+        const console = document.querySelector('[data-console]');
+        const asciiArt = document.querySelector('[data-ascii-art]');
 
         new HackingGame(
             hackingButton,
@@ -59,7 +64,12 @@ export default class Application {
             answerQuestion,
             revealedSubmittedText,
             loadingText,
-            consoleContainer
+            consoleContainer,
+            countdown,
+            inputElement,
+            answerBoxDescription,
+            console,
+            asciiArt
         );
     }
 }
