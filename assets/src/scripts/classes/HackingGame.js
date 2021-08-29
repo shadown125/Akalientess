@@ -113,7 +113,6 @@ export class HackingGame extends PuzzleHandler {
             item.remove();
         })
         this.#asciiArt.classList.add('hidden');
-        await super.addDelay(3);
         this.#init();
     }
 
@@ -187,13 +186,14 @@ export class HackingGame extends PuzzleHandler {
     }
 
     async #init() {
+        this.#loadingText.innerHTML = 'Establish Connection';
+        await super.addDelay(3);
         this.#numberContainer.classList.toggle('hidden');
         this.#textContainer.classList.toggle('hidden');
         this.#answer = '';
         this.#submitted = '';
         this.#result = true;
 
-        await super.addDelay(1);
         for (let i = 0; i < 3 && this.#result; i++) {
             [this.#submitted, this.#answer] = await super.doPuzzle();
             this.#result = (this.#submitted?.toLowerCase() === this.#answer);
