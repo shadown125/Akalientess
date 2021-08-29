@@ -167,7 +167,7 @@ export class HackingGame extends PuzzleHandler {
                 Correctly initialized the program on the computer. You are now connected to AkaLientesS.
             </div>`
         this.#box.innerHTML += `<div class="console-text console-text--intro" data-console-input-container>
-                If you want to exit, type 'exit' in the console.
+                If you want to exit, type 'exit' in the console. If you are stuck, type 'help' in the console.
             </div>`
         this.#box.innerHTML += `<div class="console-input-container" data-console-input-container>
                 <div>server@AkaLientesS:~$ </div>
