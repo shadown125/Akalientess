@@ -1,0 +1,265 @@
+@use '../susanoo-functions' as susanoo;
+
+.console {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 3;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s, background-color 0.3s;
+    &.is-active {
+        visibility: visible;
+        opacity: 1;
+    }
+    @supports (-webkit-backdrop-filter: blur(#{susanoo.rem-calc(10)})) or (backdrop-filter: blur(#{susanoo.rem-calc(10)})) {
+        -webkit-backdrop-filter: blur(#{susanoo.rem-calc(10)});
+        backdrop-filter: blur(#{susanoo.rem-calc(10)});
+        background-color: rgba(black, 0.3);
+    }
+}
+
+.console-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    height: susanoo.rem-calc(600);
+    padding: susanoo.rem-calc(30) susanoo.rem-calc(20);
+    background: {
+        color: black;
+    }
+    border: {
+        radius: susanoo.rem-calc(10);
+    }
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    z-index: 4;
+    @media (max-width: 40em) {
+        width: 100%;
+    }
+    @include susanoo.breakpoint(large-m) {
+        max-width: susanoo.rem-calc(1200);
+    }
+    &::-webkit-scrollbar {
+        width: susanoo.rem-calc(12);
+    }
+    &::-webkit-scrollbar-thumb {
+        background: {
+            color: var(--color-black-primary);
+        }
+        border: {
+            radius: susanoo.rem-calc(14);
+        }
+        &:hover {
+            background: {
+                color: var(--grey-light);
+            }
+        }
+    }
+    .ascii-art {
+        color: #08bd3e;
+        &.hidden {
+            display: none;
+        }
+    }
+    .square {
+        display: block;
+        justify-content: center;
+        align-items: center;
+        width: susanoo.rem-calc(100);
+        height: susanoo.rem-calc(100);
+        padding: susanoo.rem-calc(8);
+        background-color: var(--secondary);
+        margin: susanoo.rem-calc(20);
+        border: {
+            style: solid;
+            width: 4px;
+            color: #08bd3e;
+        }
+        @include susanoo.breakpoint(medium) {
+            width: susanoo.rem-calc(150);
+            height: susanoo.rem-calc(150);
+            padding: susanoo.rem-calc(20);
+        }
+        @include susanoo.breakpoint(large-m) {
+            width: susanoo.rem-calc(200);
+            height: susanoo.rem-calc(200);
+            padding: susanoo.rem-calc(30);
+        }
+        .big-numbers {
+            color: #08bd3e;
+        }
+    }
+    .console-text {
+        color: #08bd3e;
+        width: 100%;
+        &--intro {
+            margin: {
+                bottom: susanoo.rem-calc(20);
+            }
+        }
+        &--red {
+            color: var(--color-error);
+        }
+    }
+    .revealed-answer {
+        &.hidden {
+            display:none;
+        }
+    }
+    .answer-input {
+        position: relative;
+        background-color: transparent;
+        color: #08bd3e;
+        border: none;
+        border-bottom: 2px solid #08bd3e;
+        width: susanoo.rem-calc(150);
+        &.hidden {
+            display:none;
+        }
+        &:focus,
+        &:active,
+        &:focus-visible,
+        &:focus-within {
+            outline: none;
+        }
+    }
+    .console-input-container {
+        display: flex;
+        color: #08bd3e;
+        width: 100%;
+        &.hidden {
+            display:none;
+        }
+        .input {
+            background-color: transparent;
+            color: #08bd3e;
+            border: {
+                style: none;
+                color: black;
+                width: 0;
+            }
+            margin: {
+                top: -1px;
+                left: susanoo.rem-calc(4);
+            }
+            flex: {
+                grow: 1;
+            }
+            &:focus,
+            &:active,
+            &:focus-visible,
+            &:focus-within {
+                outline: none;
+                border: {
+                    style: none;
+                    color: black;
+                    width: 0;
+                }
+            }
+        }
+    }
+    .question {
+        margin: {
+            bottom: susanoo.rem-calc(16);
+        }
+        &.hidden {
+            display:none;
+        }
+    }
+    .input-answer-box {
+        display: flex;
+        flex-direction: column;
+        label {
+            margin: {
+                bottom: susanoo.rem-calc(6);
+            }
+            &.hidden {
+                display:none;
+            }
+        }
+    }
+    .answer-container {
+        .countdown {
+            display: flex;
+            margin: 0 auto;
+            border: #20242E;
+            width: 90%;
+            height: 4px;
+            background-color: #07732b;
+            margin: {
+                bottom: susanoo.rem-calc(30);
+            }
+            &.hidden {
+                display:none;
+            }
+        }
+        .progress-bar {
+            background-color: #08bd3e;
+            width: 100%;
+            height: 100%;
+            margin: auto;
+            transition: width 0ms linear;
+        }
+        .progress-bar-shrink{
+            width: 0;
+        }
+    }
+    .text-container {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        align-content: center;
+        justify-content: center;
+        &.hidden {
+            display:none;
+        }
+    }
+    .box-description {
+        &.hidden {
+            display:none;
+        }
+    }
+    .number-container {
+        display: flex;
+        justify-content: space-evenly;
+        text-align: center;
+        color: white;
+        margin: {
+            top: susanoo.rem-calc(20);
+        }
+        flex: {
+            wrap: wrap;
+        }
+        font: {
+            size: susanoo.rem-calc(40);
+        }
+        @include susanoo.breakpoint(medium) {
+            font: {
+                size: susanoo.rem-calc(60);
+            }
+        }
+        @include susanoo.breakpoint(large-m) {
+            font: {
+                size: susanoo.rem-calc(96);
+            }
+        }
+        &.hidden {
+            display:none;
+        }
+    }
+    .can-shrink{
+        transform:scale(1);
+        transition: all 1500ms linear;
+    }
+    .number-shrink{
+        transform:scale(0);
+        transition: all 1500ms linear;
+    }
+}
+
