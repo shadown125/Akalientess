@@ -103,10 +103,11 @@ export class HackingGame extends PuzzleHandler {
         this.#box.innerHTML += `<div class="console-text" data-console-input-container>
                 The cipher is broken, connecting to the terminal...
             </div>`
-        await super.addDelay(7);
+        await super.addDelay(2);
         this.#box.innerHTML += `<div class="console-text" data-console-input-container>
                 Initiating the program 5U5_1MP...
             </div>`
+        await super.addDelay(7);
         this.#textContainer.classList.toggle('hidden');
         this.#consoleInputContainer = document.querySelectorAll('[data-console-input-container]');
         this.#consoleInputContainer.forEach((item) => {
