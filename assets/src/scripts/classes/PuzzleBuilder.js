@@ -4,8 +4,8 @@ export class PuzzleBuilder {
     #colorable = ['background', 'text', 'number', 'shape'];
 
     #colors = {
-        'black' : 'black',
-        'white' : 'white',
+        'black' : '#000000',
+        'white' : '#FFFFFF',
         'blue' : '#1991F9',
         'red' : '#8C0C00',
         'yellow' : '#FFE335',
@@ -36,7 +36,7 @@ export class PuzzleBuilder {
         const shape = this.#generateSample(this.#shapes);
         const number = this.#generateRandomInt(9) + 1;
 
-        const topText = this.#generateSample(Object.keys('EN'));
+        const topText = this.#generateSample(Object.keys(this.#colors));
         const bottomText = this.#generateSample(this.#shapes);
 
         const colors = this.#colorable.reduce((obj, color) => {obj[color] = this.#generateSample(Object.keys(this.#colors)); return obj}, {});
