@@ -39,7 +39,9 @@ export default class Application {
     #initParticle() {
         const canvas = document.querySelector('[data-canvas]');
 
-        new Particle(canvas);
+        if (canvas !== null) {
+            new Particle(canvas);
+        }
     }
     #initHackingGame() {
         const hackingButton = document.querySelector('[data-hacking-button]');
@@ -56,20 +58,22 @@ export default class Application {
         const console = document.querySelector('[data-console]');
         const asciiArt = document.querySelector('[data-ascii-art]');
 
-        new HackingGame(
-            hackingButton,
-            numberContainer,
-            textContainer,
-            answerReveal,
-            answerQuestion,
-            revealedSubmittedText,
-            loadingText,
-            consoleContainer,
-            countdown,
-            inputElement,
-            answerBoxDescription,
-            console,
-            asciiArt
-        );
+        if (hackingButton !== null) {
+            new HackingGame(
+                hackingButton,
+                numberContainer,
+                textContainer,
+                answerReveal,
+                answerQuestion,
+                revealedSubmittedText,
+                loadingText,
+                consoleContainer,
+                countdown,
+                inputElement,
+                answerBoxDescription,
+                console,
+                asciiArt
+            );
+        }
     }
 }
