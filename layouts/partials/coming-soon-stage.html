@@ -2,6 +2,9 @@
     <div class="wrapper">
         <div class="content">
             <h2 class="h2 headline">Coming Soon...</h2>
+            <p>
+                {{ .Site.BaseURL }} ... {{ .Page.Permalink }}
+            </p>
             {{ if (eq .Page.Permalink .Site.BaseURL) }}
                 <p>
                     I am currently working for new sections on my Website
