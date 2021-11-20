@@ -1,0 +1,16 @@
+<div class="coming-soon{{ if (eq .Page.Permalink .Site.BaseURL) }} home-page {{ end }}">
+    <div class="wrapper">
+        <div class="content">
+            <h2 class="h2 headline">Coming Soon...</h2>
+            {{ if (eq .Page.Permalink .Site.BaseURL) }}
+                <p>
+                    I am currently working for new sections on my Website
+                </p>
+            {{ else }}
+            <p>
+                I am currently working on this website section
+            </p>
+            {{ end }}
+        </div>
+    </div>
+</div>
