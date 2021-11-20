@@ -1,53 +1,51 @@
 <header class="page-header" data-second-overlay>
     <div class="wrapper">
-        <div class="inner-wrapper">
-            <nav class="main-navigation">
-                <a href="{{ .Site.BaseURL }}" class="logo">
-                    <img src="{{ (resources.Get "build/logo1.png").RelPermalink }}" alt="Logo" class="logo">
-                </a>
-                <button class="button-menu" data-button-menu>
-                    <span class="line-container">
-                        <span class="first-label"></span>
-                        <span class="second-label"></span>
-                        <span class="third-label"></span>
-                    </span>
+        <nav class="main-navigation">
+            <a href="{{ .Site.BaseURL }}" class="logo">
+                <img src="{{ (resources.Get "build/logo1.png").RelPermalink }}" alt="Logo" class="logo">
+            </a>
+            <button class="button-menu" data-button-menu>
+                <span class="line-container">
+                    <span class="first-label"></span>
+                    <span class="second-label"></span>
+                    <span class="third-label"></span>
+                </span>
+            </button>
+            <div class="mobile-animation" data-mobile-container-animation></div>
+            <div class="container" data-navigation-container>
+                <button class="button-close" data-button-close>
+                    <span class="first-label"></span>
+                    <span class="second-label"></span>
                 </button>
-                <div class="mobile-animation" data-mobile-container-animation></div>
-                <div class="container" data-navigation-container>
-                    <button class="button-close" data-button-close>
-                        <span class="first-label"></span>
-                        <span class="second-label"></span>
-                    </button>
-                    <ul class="home-links">
-                        <li class="home">
-                            <a href="{{ .Site.BaseURL }}" class="link" data-nav-link>Home</a>
-                        </li>
-                        <li>
-                            <a href="#about-me" class="link" data-nav-link>About Me</a>
-                        </li>
-                        <li>
-                            <a href="#projects" class="link" data-nav-link>Projects</a>
-                        </li>
-                        <li>
-                            <a href="#distributor-cards" class="link" data-nav-link>Cards</a>
-                        </li>
-                        <li>
-                            <button class="link" data-nav-link data-nav-contact>Contact</button>
-                        </li>
-                    </ul>
-                    <ul class="social-links">
-                        <li>
-                            <a href="https://github.com/shadown125" rel="external noopener" target="_blank" class="link">Github</a>
-                        </li>
-                        <li>
-                            <a href="https://twitter.com/DawidOleksiuk" rel="external noopener" target="_blank" class="link">Twitter</a>
-                        </li>
-                        <li>
-                            <a href="https://www.linkedin.com/in/dawid-ol-2478311a4/" rel="external noopener" target="_blank" class="link">Linkedin</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </div>
+                <ul class="home-links">
+                    <li class="home">
+                        <a href="{{ .Site.BaseURL }}" class="link" data-nav-link>Home</a>
+                    </li>
+                    <li>
+                        <a href="#about-me" class="link" data-nav-link>About Me</a>
+                    </li>
+                    <li>
+                        <a href="#projects" class="link" data-nav-link>Projects</a>
+                    </li>
+                    <li>
+                        <a href="#distributor-cards" class="link" data-nav-link>Cards</a>
+                    </li>
+                    <li>
+                        <button class="link" data-nav-link data-nav-contact>Contact</button>
+                    </li>
+                </ul>
+                <ul class="social-links">
+                    <li>
+                        <a href="https://github.com/shadown125" rel="external noopener" target="_blank" class="link">Github</a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/DawidOleksiuk" rel="external noopener" target="_blank" class="link">Twitter</a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/dawid-ol-2478311a4/" rel="external noopener" target="_blank" class="link">Linkedin</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
     </div>
 </header>

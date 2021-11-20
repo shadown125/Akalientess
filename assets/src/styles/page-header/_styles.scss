@@ -2,9 +2,14 @@
 @use 'variables' as variables;
 
 .page-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     background: {
         color: var(--color-black-primary);
     }
+    z-index: 5;
     &.is-revealed {
         .main-navigation {
             visibility: visible;
