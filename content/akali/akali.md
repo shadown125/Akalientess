@@ -1,4 +1,4 @@
 ---
 title: Akali
-draft: true
+draft: false
 ---
