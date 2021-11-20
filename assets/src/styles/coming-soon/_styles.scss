@@ -1,0 +1,41 @@
+@use "../susanoo-functions" as susanoo;
+
+.coming-soon {
+    &:not(&.home-page) {
+        background: {
+            image: url("/coming-soon-background.jpg");
+            repeat: no-repeat;
+            position: center;
+        }
+        object-fit: cover;
+    }
+    &.home-page {
+        .headline,
+        p {
+            color: var(--color-black-primary);
+        }
+        .content {
+            height: unset;
+            padding: susanoo.rem-calc(100);
+        }
+    }
+    .content {
+        height: 80vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: {
+            direction: column;
+        }
+    }
+    .headline {
+        font: {
+            size: clamp(#{susanoo.rem-calc(50)}, 8vw, #{susanoo.rem-calc(100)});
+        }
+    }
+    p {
+        font: {
+            size: clamp(#{susanoo.rem-calc(16)}, 2vw, #{susanoo.rem-calc(26)});
+        }
+    }
+}
