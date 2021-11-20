@@ -1,8 +1,8 @@
-<div class="coming-soon{{ if (eq .Page.Permalink .Site.BaseURL) }} home-page {{ end }}">
+<div class="coming-soon{{ if eq (relURL .Page.Permalink) ("/" | safeHTML) }} home-page {{ end }}">
     <div class="wrapper">
         <div class="content">
             <h2 class="h2 headline">Coming Soon...</h2>
-            {{ if (eq .Page.Permalink .Site.BaseURL) }}
+            {{ if eq (relURL .Page.Permalink) ("/" | safeHTML) }}
                 <p>
                     I am currently working for new sections on my Website
                 </p>
