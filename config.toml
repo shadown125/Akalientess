@@ -1,4 +1,4 @@
-baseURL = 'http://akalientess.com/'
+baseURL = 'https://akalientess.com/'
 relativeurls = true
 languageCode = 'en-us'
 title = 'AkaLientesS'
