@@ -6,3 +6,6 @@ disableKinds = ["section"]
 [permalinks]
     list-of-projects = "/:filename"
     pattern-library = "/:filename"
+    akali = "/:filename"
+    katarina = "/:filename"
+    yasuo = "/:filename"
