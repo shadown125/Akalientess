@@ -8,6 +8,9 @@
             position: center;
         }
         object-fit: cover;
+        .content {
+            padding: susanoo.rem-calc(100);
+        }
     }
     &.home-page {
         .headline,
@@ -16,11 +19,13 @@
         }
         .content {
             height: unset;
-            padding: susanoo.rem-calc(100);
+            padding: {
+                bottom: susanoo.rem-calc(100);
+            }
         }
     }
     .content {
-        height: 80vh;
+        height: 82.5vh;
         display: flex;
         align-items: center;
         justify-content: center;
