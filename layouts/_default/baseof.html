@@ -1,8 +1,7 @@
 {{ partial "head.html" . }}
 
 <body>
-    {{ partial "header.html" . }}
-    {{ partial "sections/staging.html" . }}
+    {{ block "header" . }}{{ end }}
     <main class="page-body">
         {{ block "content" . }}{{ end }}
     </main>

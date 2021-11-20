@@ -1,3 +1,7 @@
+{{ define "header" }}
+    {{ partial "header.html" . }}
+    {{ partial "sections/staging.html" . }}
+{{ end }}
 {{ define "content" }}
 
     {{ partial "loading-mask.html" . }}
