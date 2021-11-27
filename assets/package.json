@@ -58,6 +58,7 @@
     "core-js": "^3.16.2",
     "cssnano": "^5.0.8",
     "jquery": "^3.6.0",
-    "regenerator-runtime": "^0.13.9"
+    "regenerator-runtime": "^0.13.9",
+    "swiper": "^7.3.1"
   }
 }
