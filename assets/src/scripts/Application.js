@@ -2,6 +2,7 @@ import {NavigationEvents} from "./classes/NavigationEvents";
 import {OverlaysAnimations} from "./classes/OverlaysAnimations";
 import {Particle} from "./classes/Particle";
 import {HackingGame} from "./classes/HackingGame";
+import {Slider} from "./classes/Slider";
 
 export default class Application {
     constructor() {
@@ -9,6 +10,7 @@ export default class Application {
         this.#initOverlaysAnimations();
         this.#initParticle();
         this.#initHackingGame();
+        this.#initSlider();
     }
 
     #initNavigationEvents() {
@@ -29,6 +31,7 @@ export default class Application {
             contactSection
         );
     }
+
     #initOverlaysAnimations() {
         const rareOverlays = document.querySelectorAll('[data-overlay]');
         const secondOverlays = document.querySelectorAll('[data-second-overlay]');
@@ -36,6 +39,7 @@ export default class Application {
 
         new OverlaysAnimations(rareOverlays, secondOverlays, loadingMask);
     }
+
     #initParticle() {
         const canvas = document.querySelector('[data-canvas]');
 
@@ -43,6 +47,7 @@ export default class Application {
             new Particle(canvas);
         }
     }
+
     #initHackingGame() {
         const hackingButton = document.querySelector('[data-hacking-button]');
         const numberContainer = document.querySelector('[data-number-container]');
@@ -74,6 +79,19 @@ export default class Application {
                 console,
                 asciiArt
             );
+        }
+    }
+
+    #initSlider () {
+        /**
+         * @type {NodeListOf<Element>}
+         */
+        const sliders = document.querySelectorAll('[data-slider]');
+
+        if (sliders.length > 0) {
+            sliders.forEach((slider) => {
+                new Slider(slider).init()
+            })
         }
     }
 }

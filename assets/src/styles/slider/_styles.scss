@@ -1,0 +1,82 @@
+@use '../../../node_modules/swiper/swiper-vars';
+@use '../../../node_modules/swiper/swiper';
+@use '../susanoo-functions' as susanoo;
+@use '../icons';
+
+.swiper-container {
+    position: relative;
+    overflow: hidden;
+    &:hover {
+        .swiper-button-next,
+        .swiper-button-prev {
+            opacity: 1;
+        }
+    }
+    .swiper-slide {
+        height: susanoo.rem-calc(260);
+        width: 100%;
+        box-shadow: 0 1.5625rem 4.375rem 0 rgb(0 0 0 / 50%);
+        overflow: hidden;
+        @include susanoo.breakpoint(medium) {
+            width: 50%;
+            margin: 0 susanoo.rem-calc(10);
+        }
+        @include susanoo.breakpoint(large-m) {
+            width: 33.33%;
+        }
+        &.overlay {
+            .image-wrapper {
+                opacity: 1;
+            }
+            .project-mask {
+                width: 100%;
+                transform: translateX(100%);
+            }
+        }
+    }
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    z-index: 10;
+    background: {
+        color: #4f6ce8;
+    }
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    padding: susanoo.rem-calc(6);
+    opacity: 0;
+    transition: background-color 0.2s linear, opacity 0.2s linear;
+    &:hover {
+        background: {
+            color: #ff6767;
+        }
+        &::before {
+            color: #4f6ce8;
+        }
+    }
+    &::before {
+        @include susanoo.icon(null, true);
+        font: {
+            size: map-get(icons.$icon-sizes, "big");
+        }
+        color: white;
+        transition: color 0.2s linear;
+    }
+}
+
+.swiper-button-next {
+    right: susanoo.rem-calc(10);
+    &::before {
+        @include susanoo.icon(icons.$chevron-thin-right, false);
+    }
+}
+
+.swiper-button-prev {
+    left: susanoo.rem-calc(10);
+    &::before {
+        @include susanoo.icon(icons.$chevron-thin-left, false);
+    }
+}
