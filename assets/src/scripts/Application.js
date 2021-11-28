@@ -21,6 +21,10 @@ export default class Application {
         const navLinks = document.querySelectorAll('[data-nav-link]');
         const navContactButton = document.querySelectorAll('[data-nav-contact]');
         const contactSection = document.querySelector('[data-contact-section]');
+        /**
+         * @type {NodeListOf<Element>}
+         */
+        const sections = document.querySelectorAll('[data-section]');
 
         new NavigationEvents(closeButton,
             menuButton,
@@ -28,7 +32,8 @@ export default class Application {
             mobileContainerAnimation,
             navLinks,
             navContactButton,
-            contactSection
+            contactSection,
+            sections,
         );
     }
 
