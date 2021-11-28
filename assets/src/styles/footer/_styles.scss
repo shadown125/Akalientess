@@ -12,9 +12,7 @@
     .container {
         display: flex;
         align-items: center;
-        min: {
-            height: 10vh;
-        }
+        padding: susanoo.rem-calc(32) 0;
         @media (max-width: 40em) {
             flex-direction: column;
             padding: 0 susanoo.rem-calc(32);
