@@ -7,7 +7,12 @@ export class NavigationEvents {
     #contactButton;
     #contactSection;
 
-    constructor(closeButton, menuButton, navigationContainer, mobileContainerAnimation, navLinks, contactButton, contactSection) {
+    /**
+     * @type {NodeListOf<Element>}
+     */
+    #sections;
+
+    constructor(closeButton, menuButton, navigationContainer, mobileContainerAnimation, navLinks, contactButton, contactSection, sections) {
         this.#closeButton = closeButton;
         this.#menuButton = menuButton;
         this.#navigationContainer = navigationContainer;
@@ -15,6 +20,11 @@ export class NavigationEvents {
         this.#navLinks = navLinks;
         this.#contactButton = contactButton;
         this.#contactSection = contactSection;
+        this.#sections = sections;
+
+        this.#sections.forEach((section) => {
+            this.#observeActiveSection(section);
+        })
 
         this.#contactButton.forEach((item) => {
             item.addEventListener('click', this.#contactEvent.bind(this));
@@ -24,6 +34,46 @@ export class NavigationEvents {
         })
         this.#closeButton.addEventListener('click', this.#addRemoveClass.bind(this));
         this.#menuButton.addEventListener('click', this.#addRemoveClass.bind(this));
+    }
+
+    #observeActiveSection(section) {
+        const onIntersection = (entries) => {
+            if(entries[0]['intersectionRatio'] !== 0) {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        this.#removeIsActiveClass();
+                        this.#addIsActiveClassOnCurrentSection(entry);
+                    }
+                })
+            }
+        };
+
+        const observer = new IntersectionObserver(onIntersection, {
+            threshold: 0.25
+        });
+
+        observer.observe(section);
+    }
+
+    /**
+     * @param entry
+     */
+    #addIsActiveClassOnCurrentSection (entry) {
+        this.#navLinks.forEach((link) => {
+            if (link.href) {
+                if (entry.target.id === link.href.split('#')[1]) {
+                    link.classList.add('is-active');
+                }
+            }
+        })
+    }
+
+    #removeIsActiveClass () {
+        this.#navLinks.forEach((link) => {
+            if (link.classList.contains('is-active')) {
+                link.classList.remove('is-active');
+            }
+        })
     }
 
     #addRemoveClass() {

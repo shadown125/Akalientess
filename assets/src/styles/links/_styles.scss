@@ -78,6 +78,16 @@ textarea {
             animation: hoverAnimation .65s cubic-bezier(.694,.048,.335,1) .15s;
         }
     }
+    &.is-active {
+        color: var(--color-on-primary);
+        &::before {
+            width: 100%;
+        }
+        &::after {
+            width: 100%;
+            animation: hoverAnimation .65s cubic-bezier(.694,.048,.335,1) .15s;
+        }
+    }
     &.disabled {
         pointer-events: none;
         background: {
