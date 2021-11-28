@@ -1,0 +1,91 @@
+@use '../susanoo-functions' as susanoo;
+
+.my-work {
+    * {
+        color: var(--color-black-primary);
+    }
+    .mask {
+        .headline {
+            font: {
+                weight: bold;
+            }
+        }
+    }
+    .image-wrapper {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: opacity 0s 0.5s;
+    }
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    a {
+        display: block;
+        position: relative;
+        height: 100%;
+        width: 100%;
+        &:hover {
+            &::before {
+                width: 100%;
+            }
+            .description {
+                opacity: 1;
+            }
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 0;
+            background: {
+                color: var(--color-black-primary);
+            }
+            transition: width 0.25s linear;
+            opacity: .7;
+            z-index: 1;
+        }
+    }
+    .description {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        width: 100%;
+        height: 100%;
+        padding: susanoo.rem-calc(24);
+        display: flex;
+        flex: {
+            direction: column;
+        }
+        justify-content: center;
+        align-items: center;
+        transition: opacity 0.2s 0.3s linear;
+        z-index: 2;
+        * {
+            color: white;
+        }
+        .headline {
+            font: {
+                weight: bold;
+            }
+        }
+    }
+    .project-mask {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: {
+            image: linear-gradient(270deg, #f06449, #ef3636);
+        }
+        z-index: 3;
+        width: 0;
+        height: 100%;
+        transition: width 0.5s linear, transform 0.5s 0.75s linear;
+    }
+}
