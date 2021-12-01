@@ -42,16 +42,14 @@ module.exports = (env, argv) => {
         module: {
             rules: [
                 {
-                    test: /\.(js|mjs)$/,
+                    test: /\.(js|mjs|tsx?)$/,
                     exclude: [
                         /\bcore-js\b/,
-                        /\bwebpack\/buildin\b/
+                        /\bwebpack\/buildin\b/,
+                        /node_modules/,
                     ],
                     use: {
-                        loader: 'babel-loader',
-                        options: {
-                            cacheDirectory: true
-                        }
+                        loader: 'ts-loader',
                     },
                     resolve: {
                         // https://webpack.js.org/configuration/module/#resolvefullyspecified
@@ -70,6 +68,9 @@ module.exports = (env, argv) => {
                     ]
                 }
             ]
+        },
+        resolve: {
+            extensions: ['.ts', '.js']
         }
     };
 };

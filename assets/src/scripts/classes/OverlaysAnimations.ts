@@ -4,25 +4,28 @@ export class OverlaysAnimations {
     #secondOverlays;
     #loadingMask;
 
+    // @ts-ignore
     constructor(rareOverlays, secondOverlays, loadingMask) {
         this.#rareOverlays = rareOverlays;
         this.#secondOverlays = secondOverlays;
         this.#loadingMask = loadingMask;
-
+// @ts-ignore
         this.#secondOverlays.forEach((item) => {
             this.#addSecondOverlayClass(item);
         });
-
+// @ts-ignore
         this.#rareOverlays.forEach((item) => {
             this.#addOverlayClass(item);
         });
 
         window.addEventListener('DOMContentLoaded', this.#removeLoadingMask.bind(this))
     }
-
+// @ts-ignore
     #addOverlayClass(item) {
+        // @ts-ignore
         const onIntersection = (entries) => {
             if(entries[0]['intersectionRatio'] !== 0) {
+                // @ts-ignore
                 entries.forEach((entry) => {
                     if (entry.target.classList.contains('link-project')) {
                         entry.target.classList.add('overlay-project');
@@ -47,10 +50,12 @@ export class OverlaysAnimations {
 
         observer.observe(item);
     }
-
+// @ts-ignore
     #addSecondOverlayClass(item) {
+        // @ts-ignore
         const onIntersection = (entries) => {
             if(entries[0]['intersectionRatio'] !== 0) {
+                // @ts-ignore
                 entries.forEach((entry) => {
                     entry.target.classList.add('is-revealed');
                 })

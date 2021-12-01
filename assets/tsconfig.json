@@ -1,0 +1,20 @@
+{
+    "compilerOptions": {
+      "target": "es6",
+      "module": "commonjs",
+      "lib": [
+        "dom",
+        "es6",
+        "dom.iterable",
+        "scripthost"
+      ],
+      "sourceMap": true,
+      "removeComments": true,
+      "noEmitOnError": true,
+      "strict": true,
+      "noUnusedLocals": true,
+      "noUnusedParameters": true,
+      "noImplicitReturns": true,
+      "esModuleInterop": true,
+    }
+}

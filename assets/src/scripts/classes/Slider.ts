@@ -3,30 +3,16 @@ import {Swiper, Navigation, Autoplay} from "swiper";
 Swiper.use([Navigation, Autoplay]);
 
 export class Slider {
-    /**
-     * @type {HTMLElement}
-     */
-    #element;
 
-    /**
-     * @type Object
-     */
-    #options;
+    readonly #element;
 
-    /**
-     * @type {Swiper}
-     */
-    #instance;
+    readonly #options;
 
-    /**
-     * @type {NodeListOf<Element>}
-     */
-    #sliderImageWrapper;
+    #instance!: object;
 
-    /**
-     * @type {{navigation: {nextEl: string, prevEl: string}, speed: number}}
-     */
-    #defaultOptions = {
+    #sliderImageWrapper!: NodeListOf<Element>;
+
+    #defaultOptions: any = {
         speed: 1000,
         autoplay: {
             delay: 3000,
@@ -39,11 +25,7 @@ export class Slider {
         },
     }
 
-    /**
-     * @param element
-     * @param options
-     */
-    constructor(element, options = {}) {
+    constructor(element: any, options = {}) {
         this.#element = element;
         this.#options = options;
     }
@@ -53,18 +35,23 @@ export class Slider {
     }
 
     #stopAutoplay () {
+        // @ts-ignore
         this.#instance.el.addEventListener('mouseenter', ()=> {
+            // @ts-ignore
             this.#instance.autoplay.stop();
         },false);
     }
 
     #startAutoplay () {
+        // @ts-ignore
         this.#instance.el.addEventListener('mouseleave', ()=> {
+            // @ts-ignore
             this.#instance.autoplay.start();
         },false);
     }
 
     #initOnObserver () {
+        // @ts-ignore
         const onIntersection = (entries) => {
             if(entries[0]['intersectionRatio'] !== 0) {
                 this.#instance = new Swiper(this.#element, {...this.#defaultOptions, ...this.#options});
@@ -74,6 +61,7 @@ export class Slider {
                 this.#sliderImageWrapper = document.querySelectorAll('[data-slider-image-wrapper]');
                 this.#sliderImageWrapper.forEach((item, index) => {
                     if (index >= 3) {
+                        // @ts-ignore
                         item.style.opacity = '1';
                     }
                 })
