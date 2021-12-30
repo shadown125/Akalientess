@@ -7,7 +7,7 @@
         <div class="swiper-container" data-slider>
             <div class="swiper-wrapper">
                 {{- range $index, $value := (where .Site.RegularPages "Type" "my-work").Reverse -}}
-                <div class="swiper-slide" data-overlay>
+                <div class="swiper-slide" {{ if le $index 2 }} data-overlay {{ end }}>
                     <a href="{{ .Params.affiliatelink }}" rel="external noopener" target="_blank">
                         <div class="image-wrapper" data-slider-image-wrapper>
                             <img src="{{ .Params.ImageName }}" alt="Hiking in Norway">
