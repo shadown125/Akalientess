@@ -6,42 +6,20 @@
         </div>
         <div class="swiper-container" data-slider>
             <div class="swiper-wrapper">
+                {{- range $index, $value := (where .Site.RegularPages "Type" "my-work").Reverse -}}
                 <div class="swiper-slide" data-overlay>
-                    <a href="https://hiking-norway.netlify.app/" rel="external noopener" target="_blank">
+                    <a href="{{ .Params.affiliatelink }}" rel="external noopener" target="_blank">
                         <div class="image-wrapper" data-slider-image-wrapper>
-                            <img src="akalientessMyWorkImpr1.png" alt="Hiking in Norway">
+                            <img src="{{ .Params.ImageName }}" alt="Hiking in Norway">
                         </div>
                         <div class="description">
-                            <h2 class="headline h4">Hiking in Norway</h2>
-                            <p>Click to go to Website</p>
+                            <h2 class="headline h4">{{ .Title }}</h2>
+                            <p>{{ .Content }}</p>
                         </div>
                         <div class="project-mask"></div>
                     </a>
                 </div>
-                <div class="swiper-slide" data-overlay>
-                    <a href="https://fashion-news.netlify.app/" rel="external noopener" target="_blank">
-                        <div class="image-wrapper" data-slider-image-wrapper>
-                            <img src="akalientessMyWorkImpr2.png" alt="Fashion News">
-                        </div>
-                        <div class="description">
-                            <h2 class="headline h4">Fashion News</h2>
-                            <p>Click to go to Website</p>
-                        </div>
-                        <div class="project-mask"></div>
-                    </a>
-                </div>
-                <div class="swiper-slide" data-overlay>
-                    <a href="https://running-community.netlify.app/" rel="external noopener" target="_blank">
-                        <div class="image-wrapper" data-slider-image-wrapper>
-                            <img src="akalientessMyWorkImpr3.png" alt="Running Community">
-                        </div>
-                        <div class="description">
-                            <h2 class="headline h4">Running Community</h2>
-                            <p>Click to go to Website</p>
-                        </div>
-                        <div class="project-mask"></div>
-                    </a>
-                </div>
+                {{- end -}}
             </div>
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
