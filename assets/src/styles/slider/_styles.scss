@@ -18,11 +18,16 @@
         box-shadow: 0 1.5625rem 4.375rem 0 rgb(0 0 0 / 50%);
         overflow: hidden;
         @include susanoo.breakpoint(medium) {
-            width: 50%;
-            margin: 0 susanoo.rem-calc(10);
+            width: calc(50% + #{susanoo.rem-calc(10)});
+            margin: {
+                top: 0;
+                right: susanoo.rem-calc(10);
+                bottom: 0;
+                left: 0;
+            }
         }
         @include susanoo.breakpoint(large-m) {
-            width: 33.33%;
+            width: calc(33.33% + #{susanoo.rem-calc(10)});
         }
         &.overlay {
             .image-wrapper {
