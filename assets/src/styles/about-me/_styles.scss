@@ -144,6 +144,7 @@
             size: susanoo.rem-calc(160);
         }
         opacity: .1;
+        z-index: -1;
         @include susanoo.breakpoint(medium) {
             left: susanoo.rem-calc(-100);
             font: {
