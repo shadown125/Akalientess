@@ -6,7 +6,7 @@
         </div>
         <div class="container">
             <ul>
-                {{- range $index, $value := (where .Site.RegularPages "Type" "list-of-projects-own").Reverse -}}
+                {{- range $index, $value := (where .Site.RegularPages "Type" "list-of-projects-own") -}}
                 <li>
                     <a href="{{ .Params.affiliatelink }}"
                        class="link-project" target="_blank"
