@@ -45,6 +45,17 @@
                 color: variables.$color-js-node;
             }
         }
+        .react {
+            &::after {
+                @include susanoo.icon(icon.$icon-react, true);
+                color: variables.$color-react;
+            }
+        }
+        .next-js {
+            &::after {
+                @include susanoo.icon(icon.$icon-next-js, true);
+            }
+        }
         .symfony {
             &::after {
                 @include susanoo.icon(icon.$icon-symfony, true);
