@@ -1,5 +1,5 @@
 {
-  "name": "AkaLientesS",
+  "name": "akalientess",
   "version": "1.0.0",
   "description": "AkaLientesS Portfolio",
   "main": "index.js",
@@ -17,7 +17,6 @@
     "sass:watch": "sass src/styles:build --no-source-map --watch",
     "postcss:build": "postcss build/*.css --replace --env production",
     "postcss:watch": "postcss build/*.css --watch --dir build --poll=1000",
-    "pre-production": "grunt pre-production",
     "test": "jest"
   },
   "keywords": [],
